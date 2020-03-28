@@ -6,5 +6,6 @@
         <page name='Queues'/>
         <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
         <page name='Strings&amp;Pallendrome'/>
+        <page name='BigONotation'/>
     </pages>
 </playground>
