@@ -4,5 +4,6 @@
         <page name='Generics&amp;Stacks'/>
         <page name='Untitled Page'/>
         <page name='Queues'/>
+        <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
     </pages>
 </playground>
