@@ -5,5 +5,6 @@
         <page name='LinkedList'/>
         <page name='Queues'/>
         <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
+        <page name='Strings&amp;Pallendrome'/>
     </pages>
 </playground>
