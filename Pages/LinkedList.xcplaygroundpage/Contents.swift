@@ -180,3 +180,53 @@ fellows.removeLast()
 fellows.removeLast()
 fellows.removeLast()
 fellows.removeLast()
+
+
+/=================================================================================
+//                          Questions: Linked List
+//=================================================================================
+
+class LLNode {
+  var value: Int
+  var next: LLNode?
+  init(_ value: Int) {
+    self.value = value
+  }
+}
+
+let node1 = LLNode(1)
+let node2 = LLNode(2)
+let node9 = LLNode(9)
+let node4 = LLNode(4)
+let node5 = LLNode(5)
+
+node1.next = node2
+node2.next = node9
+node9.next = node4
+node4.next = node5
+
+// problem 1
+// Using the Linked List above, write a function that finds the largest number in a Linked List of Ints.
+// output: 9
+
+func largestNumber(_ node: LLNode) -> Int {
+  var node = node
+  var largestNum = node.value
+
+  while let next = node.next {
+    if largestNum < next.value {
+      largestNum = next.value
+    }
+
+    node = next
+  }
+
+  return largestNum
+}
+
+
+print(largestNumber(node1))
+
+
+// problem 2
+// https://leetcode.com/problems/reverse-linked-list/

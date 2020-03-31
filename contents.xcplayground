@@ -5,7 +5,14 @@
         <page name='LinkedList'/>
         <page name='Queues'/>
         <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
-        <page name='Strings&amp;Pallendrome'/>
+        <page name='Strings&amp;Pallendrome&amp;FrequencyDictionary'/>
         <page name='BigONotation'/>
+        <page name='BinarySearch'/>
+        <page name='BubbleSort'/>
+        <page name='InsertionSort'/>
+        <page name='MergeSort'/>
+        <page name='QuickSort'/>
+        <page name='BinaryTree-Breadth-first traversal'/>
+        <page name='BinaryTree-Depth-firstTraversal'/>
     </pages>
 </playground>
