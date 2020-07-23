@@ -254,3 +254,42 @@ print(countCharacters(["cat","bt","hat","tree"], "atach"))
 // dictionary.remove()
 // dictionary["a"] = nil
 // dictionary()
+
+
+// Swift Coding Challlenges
+
+// 1. “Write a function that accepts a String as its only parameter, and returns true if the string has only unique letters, taking letter case into account.”
+
+//need to repeat Sets
+/*
+func uniqueStr(str: String) -> Bool {
+    let strWithoutSpaces = str.components(separatedBy: " ").joined(separator: "")
+    let isOrNotUnique: Set = [strWithoutSpaces]
+    return strWithoutSpaces.count == isOrNotUnique.count
+}
+
+print(uniqueStr(str: "No duplicates"))
+*/
+
+func challenge1(input: String) -> Bool {
+    let strWithoutSpaces = input.components(separatedBy: .whitespaces).joined(separator: "")
+    var uniqueArr = [Character]()
+    
+    for char in strWithoutSpaces {
+        if !uniqueArr.contains(char) {
+            uniqueArr.append(char)
+        }
+    }
+
+    return strWithoutSpaces.count == uniqueArr.count
+}
+
+print(challenge1(input: "No duplicates"))
+
+assert(challenge1(input: "No duplicates") == true, "Challenge 1 failed")
+assert(challenge1(input: "abcdefghijklmnopqrstuvwxyz") == true, "Challenge 1 failed")
+assert(challenge1(input: "AaBbCc") == true, "Challenge 1 failed")
+assert(challenge1(input: "Hello, world") == false, "Challenge 1 failed")
+
+
+
