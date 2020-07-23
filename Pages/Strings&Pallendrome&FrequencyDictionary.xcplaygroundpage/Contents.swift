@@ -261,15 +261,21 @@ print(countCharacters(["cat","bt","hat","tree"], "atach"))
 // 1. “Write a function that accepts a String as its only parameter, and returns true if the string has only unique letters, taking letter case into account.”
 
 //need to repeat Sets
-/*
+
 func uniqueStr(str: String) -> Bool {
     let strWithoutSpaces = str.components(separatedBy: " ").joined(separator: "")
-    let isOrNotUnique: Set = [strWithoutSpaces]
+    let isOrNotUnique = Set(strWithoutSpaces)
     return strWithoutSpaces.count == isOrNotUnique.count
 }
+// Runtime? - constant 0(1)
 
 print(uniqueStr(str: "No duplicates"))
-*/
+
+assert(uniqueStr(str: "No duplicates") == true, "Challenge 1 failed")
+assert(uniqueStr(str: "abcdefghijklmnopqrstuvwxyz") == true, "Challenge 1 failed")
+assert(uniqueStr(str: "AaBbCc") == true, "Challenge 1 failed")
+assert(uniqueStr(str: "Hello, world") == false, "Challenge 1 failed")
+
 
 func challenge1(input: String) -> Bool {
     let strWithoutSpaces = input.components(separatedBy: .whitespaces).joined(separator: "")
@@ -283,6 +289,8 @@ func challenge1(input: String) -> Bool {
 
     return strWithoutSpaces.count == uniqueArr.count
 }
+
+// Tuntime? - I think O(n)
 
 print(challenge1(input: "No duplicates"))
 
