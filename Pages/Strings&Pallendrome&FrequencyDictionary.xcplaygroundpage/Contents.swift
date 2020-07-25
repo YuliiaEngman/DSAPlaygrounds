@@ -425,6 +425,26 @@ print(uniqueStr(input: "yul, iia, r"))
 // }
 
 
+// Solution # 2
+// let str = "yuy"
+// let reversedStr = str.reversed().lovercased() // reversed and checking for lovercase
+// Lowercased comes first!!!! after reversed!!!
+// return str == reversedStr // should return true
+
+func challenge2(input: String) -> Bool {
+    let reversedStr = input.lowercased().reversed()
+    
+    print(String(reversedStr))
+    return input.lowercased() == String(reversedStr)
+}
+
+print(challenge2(input: "Rats live on no evil star"))
+
+print(challenge2(input: "rotator"))
+print(challenge2(input: "Never odd or even"))
+print(challenge2(input: "Hello, world"))
+
+
 
 
 
