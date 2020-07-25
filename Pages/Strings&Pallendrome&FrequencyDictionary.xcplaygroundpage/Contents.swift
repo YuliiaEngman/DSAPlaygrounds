@@ -290,7 +290,7 @@ func challenge1(input: String) -> Bool {
     return strWithoutSpaces.count == uniqueArr.count
 }
 
-// Tuntime? - I think O(n)
+// Runtime? - I think O(n)
 
 print(challenge1(input: "No duplicates"))
 
@@ -299,5 +299,94 @@ assert(challenge1(input: "abcdefghijklmnopqrstuvwxyz") == true, "Challenge 1 fai
 assert(challenge1(input: "AaBbCc") == true, "Challenge 1 failed")
 assert(challenge1(input: "Hello, world") == false, "Challenge 1 failed")
 
+func challenge1b(input: String) -> String {
+    let inputWithoutSpace = input.components(separatedBy: .whitespaces).joined(separator: "")
+    let inputWithoutCommas = inputWithoutSpace.components(separatedBy: .punctuationCharacters).joined(separator: "")
+    
+    var uniqArr = [Character]()
+    
+    for char in inputWithoutCommas {
+        if !uniqArr.contains(char) {
+            uniqArr.append(char)
+        }
+    }
+    return String(uniqArr)
+}
 
+print(challenge1b(input: "abracadabra"))
+
+
+
+// Remove duplicates
+
+/*
+You are given a string, str, of length N consisting of lowercase letters of alphabet.
+You have to remove all those characters from str which have already appeared in it, i.e.,
+you have to keep only first occurance of each letter.
+*/
+
+// "alexander" => alexndr
+
+// can use builtin func
+//punctuation - no need ignore but can
+
+// 1. Create func that takes String and returns str
+// 2. Guard against white spaces
+// 3. Empty array
+// 4. Loop through string and add letter to array if there is no duplicates
+// 5. Test my func
+
+// let str = "yuu" -> "yu"
+// var arr = [Characters]()
+// for char in str {
+//   if !arr.containts(char) {
+//     arr.append(char)
+//   }
+//    return String(arr)
+// }
+
+
+func uniqueStr(input: String) -> String {
+
+  // "alex paul ios" => "alex pu is"
+  // hint: char.isLetter true or false
+ // let strWithoutWhiteSpaces = input.components(se)
+
+  var arr = [Character]() // n space
+  // [1, 3, 4, 4,5 ,5 6]
+
+  var uniqueChars: Set<Character> = [] // n space
+
+  // if using .contains you can optimize the runtime from
+  // quadratic to linear by using a Set as opposed to an array
+
+  // space completxity has to deal with memory allocation e.g
+  // decalaring an array or set or dictionary
+
+  for char in input { // O(n)
+    // code here
+      if !char.isLetter { // ?, _, 9
+        // code
+        // include the char to the
+        arr.append(char)
+        // missing a statement ?
+        // break?
+        // continue
+        continue
+      }
+
+    
+
+    if !arr.contains(char) { // O(m)
+      arr.append(char) // ["y", "u"]
+    }
+    
+  }
+ 
+  return String(arr)
+}
+
+print(uniqueStr(input: "alexander"))
+
+print(uniqueStr(input: "yul, iia, r"))
 

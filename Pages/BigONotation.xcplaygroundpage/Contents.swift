@@ -49,7 +49,7 @@ import UIKit
 //  }
 //  print(arr[0])
 //
-//  // constnat = O(1)
+//  // constant = O(1)
 //  // linear = O(n)
 //  // quadratic = O(n^2)
 //}
