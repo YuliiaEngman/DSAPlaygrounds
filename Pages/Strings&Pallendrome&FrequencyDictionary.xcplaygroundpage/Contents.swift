@@ -434,6 +434,7 @@ func challenge2a(input: String) -> Bool {
 }
 
 // I think runtime is 0(n)
+// space complexity 0(n)
 
 print(challenge2a(input: "Rats live on no evil star"))
 print(challenge2a(input: "rotator"))
@@ -455,6 +456,7 @@ func challenge2b(input: String) -> Bool {
     return input.lowercased() == String(reversedStr)
 }
 // I thing the runtime is O(n)
+// space complexity 0(n)
 
 print(challenge2b(input: "Rats live on no evil star"))
 
@@ -463,6 +465,46 @@ print(challenge2b(input: "Never odd or even"))
 print(challenge2b(input: "Hello, world"))
 
 
+/*
+“Challenge 3: Do two strings contain the same characters?
+Difficulty: Easy
+
+Write a function that accepts two String parameters, and returns true if they contain the same characters in any order taking into account letter case.
+
+Sample input and output
+The strings “abca” and “abca” should return true.
+The strings “abc” and “cba” should return true.
+The strings “ a1 b2 ” and “ b1 a2 ” should return true.
+The strings “abc” and “abca” should return false.”
+ “The strings “abc” and “cbAa” should return false.
+ The strings “abcc” and “abca” should return false.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+*/
+
+// Takes 2 Strings
+// Letter case matter!
+// Need to contain exact letter in any order
+// I assume that white spaces do not matter
+
+// Solution 1 - use builtin func .contains() - cannot solve using builtin func
+
+func challenge3a(input1: String, input2: String) -> Bool {
+    
+    let sortedInput1 = input1.sorted()
+   // let sortedInput2 = String(input2.sorted())
+    
+    return sortedInput1.contains(Character(input2.sorted()))
+}
+
+print(challenge3a(input1: "abca", input2: "abca"))
+print(challenge3a(input1: "abc", input2: "cba"))
+print(challenge3a(input1: "a1 b2", input2: "b1 a2"))
+print(challenge3a(input1: "abc", input2: "abca"))
+print(challenge3a(input1: "abc", input2: "cbAa"))
+print(challenge3a(input1: "abcc", input2: "abca"))
 
 
 
