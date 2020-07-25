@@ -491,20 +491,39 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 
 // Solution 1 - use builtin func .contains() - cannot solve using builtin func
 
-func challenge3a(input1: String, input2: String) -> Bool {
+//func challenge3a(input1: String, input2: String) -> Bool {
+//
+//    var str = input2
+//    
+//    for char in input1 {
+//        if str.contains(char) {
+//            str.remove(at: in)
+//             continue
+//        } else {
+//             break
+//        }
+//    }
+//    return str.count == 0
+//}
+//
+//print(challenge3a(input1: "abca", input2: "abca"))
+//print(challenge3a(input1: "abc", input2: "cba"))
+//print(challenge3a(input1: "a1 b2", input2: "b1 a2"))
+//print(challenge3a(input1: "abc", input2: "abca"))
+//print(challenge3a(input1: "abc", input2: "cbAa"))
+//print(challenge3a(input1: "abcc", input2: "abca"))
+
+
+// Solution 2 - use builtin func .sorted() - and compare them
+
+func challenge3b(input1: String, input2: String) -> Bool {
     
-    let sortedInput1 = input1.sorted()
-   // let sortedInput2 = String(input2.sorted())
-    
-    return sortedInput1.contains(Character(input2.sorted()))
+    return input1.sorted() == input2.sorted()
 }
 
-print(challenge3a(input1: "abca", input2: "abca"))
-print(challenge3a(input1: "abc", input2: "cba"))
-print(challenge3a(input1: "a1 b2", input2: "b1 a2"))
-print(challenge3a(input1: "abc", input2: "abca"))
-print(challenge3a(input1: "abc", input2: "cbAa"))
-print(challenge3a(input1: "abcc", input2: "abca"))
-
-
-
+print(challenge3b(input1: "abca", input2: "abca"))
+print(challenge3b(input1: "abc", input2: "cba"))
+print(challenge3b(input1: "a1 b2", input2: "b1 a2"))
+print(challenge3b(input1: "abc", input2: "abca"))
+print(challenge3b(input1: "abc", input2: "cbAa"))
+print(challenge3b(input1: "abcc", input2: "abca"))
