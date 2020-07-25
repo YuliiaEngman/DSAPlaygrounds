@@ -416,13 +416,30 @@ print(uniqueStr(input: "yul, iia, r"))
 
 // Solution # 1 (does not work)
 // let str = "yuy" // should return true
-// var reverseArr = []
+// var reverseStr = ""
 //
-// for char in str.lovercased() { // looping through string thgat is lovercased
-// reverseArr.append(char) +
+// for char in str.lovercased() { // looping through string that is lovercased
+// reverseStr = String(char) + reverseStr
 // }
-// return str == String(reverseArr)
+// return str.lowercased() == reverseStr
 // }
+
+func challenge2a(input: String) -> Bool {
+    var reverseStr = ""
+    
+    for char in input.lowercased() {
+        reverseStr = String(char) + reverseStr
+    }
+    return reverseStr == input.lowercased()
+}
+
+// I think runtime is 0(n)
+
+print(challenge2a(input: "Rats live on no evil star"))
+print(challenge2a(input: "rotator"))
+print(challenge2a(input: "Never odd or even"))
+print(challenge2a(input: "Hello, world"))
+
 
 
 // Solution # 2
@@ -431,18 +448,19 @@ print(uniqueStr(input: "yul, iia, r"))
 // Lowercased comes first!!!! after reversed!!!
 // return str == reversedStr // should return true
 
-func challenge2(input: String) -> Bool {
+func challenge2b(input: String) -> Bool {
     let reversedStr = input.lowercased().reversed()
     
     print(String(reversedStr))
     return input.lowercased() == String(reversedStr)
 }
+// I thing the runtime is O(n)
 
-print(challenge2(input: "Rats live on no evil star"))
+print(challenge2b(input: "Rats live on no evil star"))
 
-print(challenge2(input: "rotator"))
-print(challenge2(input: "Never odd or even"))
-print(challenge2(input: "Hello, world"))
+print(challenge2b(input: "rotator"))
+print(challenge2b(input: "Never odd or even"))
+print(challenge2b(input: "Hello, world"))
 
 
 
