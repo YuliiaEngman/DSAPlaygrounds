@@ -390,3 +390,41 @@ print(uniqueStr(input: "alexander"))
 
 print(uniqueStr(input: "yul, iia, r"))
 
+
+/*
+ “Challenge 2: Is a string a palindrome?
+
+ Write a function that accepts a String as its only parameter, and returns true if the string reads the same when reversed, ignoring case.
+
+ Sample input and output
+ The string “rotator” should return true.
+ The string “Rats live on no evil star” should return true.
+ The string “Never odd or even” should return false; even though the letters are the same in reverse the spaces are in different places.
+ The string “Hello, world” should return false because it reads “dlrow ,olleH” backwards.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. */
+
+// Should be lovercased
+// Pay attention to spaces - should be at the same place
+
+// Can I use buildin func? yes
+
+// Create func that takes String as parameter and returns Bool
+// Creare an empty array and looping though it adding letter to it and return true if ther are equal
+// Test cases
+
+
+// Solution # 1 (does not work)
+// let str = "yuy" // should return true
+// var reverseArr = []
+//
+// for char in str.lovercased() { // looping through string thgat is lovercased
+// reverseArr.append(char) +
+// }
+// return str == String(reverseArr)
+// }
+
+
+
+
+
