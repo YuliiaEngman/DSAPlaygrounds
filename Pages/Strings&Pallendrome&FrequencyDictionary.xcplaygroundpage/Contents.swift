@@ -546,3 +546,54 @@ print(challenge3b(input1: "a1 b2", input2: "b1 a2"))
 print(challenge3b(input1: "abc", input2: "abca"))
 print(challenge3b(input1: "abc", input2: "cbAa"))
 print(challenge3b(input1: "abcc", input2: "abca"))
+
+/*
+“Challenge 4: Does one string contain another?
+Difficulty: Easy
+
+Write your own version of the contains() method on String that ignores letter case, and without using the existing contains() method.
+
+Sample input and output
+The code "Hello, world".fuzzyContains("Hello") should return true.
+The code "Hello, world".fuzzyContains("WORLD") should return true.
+The code "Hello, world".fuzzyContains("Goodbye") should return false.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+*/
+
+
+//func backwords(_ str: String) -> String {
+//    var backwordStr = ""
+//    for char in str {
+//        backwordStr = String(char) + backwordStr
+//    }
+//    return backwordStr
+//}
+
+//print(backwords("dontnod"))
+
+func customContains(str1: String, str2: String) -> Bool {
+    var firstString = str1.lowercased()
+    let comparedStr = str2.lowercased()
+    
+    for char in comparedStr {
+        if let index = firstString.firstIndex(of: char) {
+            firstString.remove(at: index)
+        } else {
+            return false
+        }
+    }
+    return comparedStr.count == 0
+}
+
+print(customContains(str1: "Hello, world", str2: "Hello"))
+
+
+//for letter in string1 {
+//    if let index = checkString.firstIndex(of: letter) {
+//        checkString.remove(at: index)
+//    } else {
+//        return false
+//    }
+//}
+//return checkString.count == 0
