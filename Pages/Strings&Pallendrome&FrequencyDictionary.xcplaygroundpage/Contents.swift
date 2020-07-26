@@ -561,39 +561,33 @@ The code "Hello, world".fuzzyContains("Goodbye") should return false.”
 Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 */
 
+/*
+ “Solution
+ If you were already familiar with the range(of:) method, this one should have proved straightforward. If not, you were probably wondering why I gave it an easy grade!
 
-//func backwords(_ str: String) -> String {
-//    var backwordStr = ""
-//    for char in str {
-//        backwordStr = String(char) + backwordStr
-//    }
-//    return backwordStr
-//}
+ The range(of:) method returns the position of one string inside another. As it’s possible the substring might not exist in the other, the return value is optional. This is perfect for us: if we call range(of:) and get back nil, it means the substring isn’t contained inside the check string.
 
-//print(backwords("dontnod"))
+ Ignoring letter case adds a little complexity, but can be solved either by collapsing the case before you do your check, or by using the .caseInsensitive option for range(of:).
 
-func customContains(str1: String, str2: String) -> Bool {
-    var firstString = str1.lowercased()
-    let comparedStr = str2.lowercased()
-    
-    for char in comparedStr {
-        if let index = firstString.firstIndex(of: char) {
-            firstString.remove(at: index)
-        } else {
-            return false
-        }
-    }
-    return comparedStr.count == 0
-}
+ The former looks like this:
 
-print(customContains(str1: "Hello, world", str2: "Hello"))
+ extension String {
+     func fuzzyContains(_ string: String) -> Bool {
+         return self.uppercased().range(of:
+ self.uppercased().range(of: string.uppercased()) != nil
+     }
+ }
+ 
+ And the latter like this:
 
+ extension String {
+     func fuzzyContains(_ string: String) -> Bool {
+         return range(of: string, options: .caseInsensitive) != nil
+     }
+ }
+ In this instance the two are identical, but there’s a benefit to collapsing the case if you had to check through lots of items.
 
-//for letter in string1 {
-//    if let index = checkString.firstIndex(of: letter) {
-//        checkString.remove(at: index)
-//    } else {
-//        return false
-//    }
-//}
-//return checkString.count == 0
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
