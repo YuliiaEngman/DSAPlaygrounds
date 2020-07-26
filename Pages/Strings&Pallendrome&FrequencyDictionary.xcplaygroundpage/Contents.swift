@@ -494,10 +494,10 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 //func challenge3a(input1: String, input2: String) -> Bool {
 //
 //    var str = input2
-//    
+//
 //    for char in input1 {
 //        if str.contains(char) {
-//            str.remove(at: in)
+//            str.remove(char.)
 //             continue
 //        } else {
 //             break
@@ -512,6 +512,25 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 //print(challenge3a(input1: "abc", input2: "abca"))
 //print(challenge3a(input1: "abc", input2: "cbAa"))
 //print(challenge3a(input1: "abcc", input2: "abca"))
+
+/*
+ Correct solution #1:
+ 
+ func challenge3a(string1: String, string2: String) -> Bool {
+     var checkString = string2
+
+     for letter in string1 {
+         if let index = checkString.firstIndex(of: letter) {
+             checkString.remove(at: index)
+         } else {
+             return false
+         }
+     }
+     return checkString.count == 0
+ }
+ 
+ runtime I guess O(n^2)
+ */
 
 
 // Solution 2 - use builtin func .sorted() - and compare them
