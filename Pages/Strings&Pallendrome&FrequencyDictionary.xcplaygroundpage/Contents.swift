@@ -669,7 +669,34 @@ func challenge6(input: String) -> String {
     return checkedStr
 }
 
+// Runtime O(n), spacecomplexity O(n)
+
 print(challenge6(input: "wombat"))
 print(challenge6(input: "hello"))
 print(challenge6(input: "Mississippi"))
 
+/* I LIKE THIS SOLUTION:
+ 
+ “As you know, dictionaries hold a value attached to a key, and only one value can be attached to a specific key at any time. You can change the value attached to a key just by assigning it again, but you can also call the updateValue() method – it does the same thing, but also returns either the original value or nil if there wasn’t one. So, if you call updateValue() and get back nil it means “that wasn’t already in the dictionary, but it is now.”
+
+ We can use this method in combination with the filter() method on our input string’s character property: filter the characters so that only those that return nil for updateValue() are used in the return array.
+
+ So, the third solution to this challenge looks like this:
+
+ func challenge6c(string: String) -> String {
+     var used = [Character: Bool]()
+
+     let result = string.filter {
+         used.updateValue(true, for
+ “        used.updateValue(true, forKey: $0) == nil
+     }
+
+     return String(result)
+ }
+ As long as you know about the updateValue() method, that code is brilliantly readable – the use of filter() means it’s clear what the loop is trying to do. However, if you don’t know about updateValue() then I suspect it falls short and is best avoided.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. */
+
+//  REPEAT HIGH ORDER FUNCTIONS!!!!
