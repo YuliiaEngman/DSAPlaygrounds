@@ -738,3 +738,62 @@ func challenge7(input: String) -> String {
 print(challenge7(input: "a   b   c"))
 print(challenge7(input: "    a"))
 print(challenge7(input: "abc"))
+
+/*
+ “However, for once, this is a place where regular expressions can help: they turn all that into a single line of code:
+
+ func challenge7b(input: String) -> String {
+     return input.replacingOccurrences(of: " +", with: " ", options: .regularExpression, range: nil)
+ }
+ If you’re not familiar with regular expressions, “[space]+” means “match one or more spaces”, so that will cause all multiple spaces to be replaced with a single space. Running regular “expressions isn’t cheap, so that code runs about 50% the speed of the manual solution, but you would have to be doing a heck of a lot of work in order for it to be noticeable.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+
+/*
+ “Challenge 8: String is rotated
+ Difficulty: Tricky
+
+ Write a function that accepts two strings, and returns true if one string is rotation of the other, taking letter case into account.
+
+ Tip: A string rotation is when you take a string, remove some letters from its end, then append them to the front. For example, “swift” rotated by two characters would be “ftswi”.
+
+ Sample input and output
+ The string “abcde” and “eabcd” should return true.
+ The string “abcde” and “cdeab” should return true.
+ The string “abcde” and “abced” should return false; this is not a string rotation.
+ “The string “abc” and “a” should return false; this is not a string rotation.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ ”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+/*
+ “
+ Hint #1: This is easier than you think.
+
+ Hint #2: A string is only considered a rotation if is identical to the original once you factor in the letter movement. That is, “tswi” is not a rotation of “swift” because it is missing the F.
+
+ Hint #3: If you write a string twice, it must encapsulate all possible rotations, e.g. “catcat” contains “cat”, “tca”, and “atc”.
+
+ Solution
+ This question appears in coding interviews far more than it deserves, because it’s a problem that seems tricky the first time you face it but is staring-you-in-the-face obvious once someone has told you the solution. I wonder how many times this question appears on interviews just so the interviewer can feel smug about knowing the answer!
+
+ Anyway, let’s talk about the solution. As I said in hint #3, if you write a string twice it must always encapsulate all possible rotations. So if your string was “abc” then you would double it to “abcabc”, which contains all possible rotations: “abc”, “cab”, and “bca”.
+
+ So, an initial solution might look like this:
+
+ func challenge8(input: String, rotated: String) -> Bool {
+     let combined = input + input
+     return combined.contains(rotated)
+ }
+ However, that’s imperfect[…]”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
+ */
+
