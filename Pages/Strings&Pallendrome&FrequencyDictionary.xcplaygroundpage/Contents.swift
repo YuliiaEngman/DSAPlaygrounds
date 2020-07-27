@@ -609,4 +609,26 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
 
+func challenge5(input1: String, input2: Character ) -> Int {
+    
+    var count = 0
+    
+    var arr = [Character]()
+    
+    for char in input1 {
+        if char == input2 {
+            count = count + 1
+            //arr.append(input2)
+//        } else {
+//            continue
+//        }
+    }
+    }
+    return count
+
+}
+
+print(challenge5(input1: "The rain in Spain", input2: "a"))
+print(challenge5(input1: "Mississippi", input2: "i"))
+print(challenge5(input1: "Hacking with Swift", input2: "i"))
 
