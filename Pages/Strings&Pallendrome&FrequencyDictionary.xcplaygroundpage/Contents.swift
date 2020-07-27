@@ -700,3 +700,41 @@ print(challenge6(input: "Mississippi"))
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. */
 
 //  REPEAT HIGH ORDER FUNCTIONS!!!!
+
+
+
+
+/*
+ “Challenge 7: Condense whitespace
+ Difficulty: Easy
+
+ Write a function that returns a string with any consecutive spaces replaced with a single space.
+
+ Sample input and output
+ I’ve marked spaces using “[space]” below for visual purposes:
+
+ The string “a[space][space][space]b[space][space][space]c” should return “a[space]b[space]c”.
+ The string “[space][space][space][space]a” should return “[space]a”.
+ The string “abc” should return “abc”.
+ ”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge7(input: String) -> String {
+    
+    var newStr = ""
+    
+    for char in input {
+        if char == " " && newStr.last == " " {
+            continue
+        } else {
+            newStr = newStr + String(char)
+        }
+    }
+    return newStr
+}
+
+print(challenge7(input: "a   b   c"))
+print(challenge7(input: "    a"))
+print(challenge7(input: "abc"))
