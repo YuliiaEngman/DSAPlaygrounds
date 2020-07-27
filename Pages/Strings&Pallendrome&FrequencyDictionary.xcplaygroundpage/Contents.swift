@@ -618,17 +618,24 @@ func challenge5(input1: String, input2: Character ) -> Int {
     for char in input1 {
         if char == input2 {
             count = count + 1
-            //arr.append(input2)
-//        } else {
-//            continue
-//        }
-    }
+        }
     }
     return count
-
 }
+
+// Runtime O(n), space complexity O(n)
 
 print(challenge5(input1: "The rain in Spain", input2: "a"))
 print(challenge5(input1: "Mississippi", input2: "i"))
 print(challenge5(input1: "Hacking with Swift", input2: "i"))
+
+// I like this alternatuve so;ution:
+//“There’s actually a fourth option you might have chosen. It’s the shortest option, however it requires a little lateral thinking: you can calculate how many times a letter appears in a string by removing it, then comparing the lengths of the original and modified strings. Here it is in Swift:
+//
+//func challenge5d(input: String, count: String) -> Int {
+//    let modified = input.replacingOccurrences(of: count, with: "")
+//    return input.count - modified.count
+//}”
+//
+//Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
 
