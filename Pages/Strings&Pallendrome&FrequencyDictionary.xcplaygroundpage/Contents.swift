@@ -637,5 +637,39 @@ print(challenge5(input1: "Hacking with Swift", input2: "i"))
 //    return input.count - modified.count
 //}”
 //
-//Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
+//Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+
+
+
+/*
+“Challenge 6: Remove duplicate letters from a string
+Difficulty: Easy
+
+Write a function that accepts a string as its input, and returns the same string just with duplicate letters removed.
+
+Tip: If you can solve this challenge without a for-in loop, you can consider it “tricky” rather than “easy”.
+
+Sample input and output
+The string “wombat” should print “wombat”.
+The string “hello” should print “helo”.
+The string “Mississippi” should print “Misp”.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge6(input: String) -> String {
+    var checkedStr = ""
+   
+    for char in input {
+        if !checkedStr.contains(char) {
+            checkedStr = checkedStr + String(char)
+        }
+    }
+    return checkedStr
+}
+
+print(challenge6(input: "wombat"))
+print(challenge6(input: "hello"))
+print(challenge6(input: "Mississippi"))
 
