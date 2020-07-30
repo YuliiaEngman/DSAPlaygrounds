@@ -826,6 +826,8 @@ func challenge9(input: String) -> Bool {
     return arrAlphabet.count == 0
 }
 
-print(isPangram(input: "The quick brown fox jumps over the lazy dog"))
+// Is runtime O(n2) or O(n log n)
 
-print(isPangram(input: "The quick brown fox jumped over the lazy dog"))
+print(challenge9(input: "The quick brown fox jumps over the lazy dog"))
+
+print(challenge9(input: "The quick brown fox jumped over the lazy dog"))
