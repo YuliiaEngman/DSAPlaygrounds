@@ -797,3 +797,35 @@ print(challenge7(input: "abc"))
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
  */
 
+
+/*
+“Challenge 9: Find pangrams
+Difficulty: Tricky
+
+Write a function that returns true if it is given a string that is an English pangram, ignoring letter case.
+
+Tip: A pangram is a string that contains every letter of the alphabet at least once.
+
+Sample input and output
+The string “The quick brown fox jumps over the lazy dog” should return true.
+The string “The quick brown fox jumped over the lazy dog” should return false, because it’s missing the S.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+// Turn String to array of characters
+
+func challenge9(input: String) -> Bool {
+    var arrAlphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
+    for char in input.lowercased() {
+        if arrAlphabet.contains(char) {
+            arrAlphabet.remove(at: arrAlphabet.firstIndex(of: char) ?? 0)
+        }
+    }
+    return arrAlphabet.count == 0
+}
+
+print(isPangram(input: "The quick brown fox jumps over the lazy dog"))
+
+print(isPangram(input: "The quick brown fox jumped over the lazy dog"))
