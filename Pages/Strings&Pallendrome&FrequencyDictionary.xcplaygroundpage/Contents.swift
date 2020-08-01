@@ -938,12 +938,26 @@ print(challenge1(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
 
 func challenge11(input1: String, input2: String) -> Bool {
     
-    if input1.count == input2.count else {
+    var str2 = input2
+    
+    if input1.count == input2.count {
         
+        for char in input1 {
+            if str2.contains(char) {
+                str2.remove(at: str2.firstIndex(of: char)!)
+            }
+        }
     }
     
-    return true
+    return str2.count <= 3
 }
+
+print(challenge11(input1: "Clamp", input2: "Cramp"))
+print(challenge11(input1: "Clamp", input2: "Crams"))
+print(challenge11(input1: "Clamp", input2: "Grams"))
+print(challenge11(input1: "Clamp", input2: "Grans"))
+print(challenge11(input1: "Clamp", input2: "Clam"))
+print(challenge11(input1: "clamp", input2: "maple"))
 
 
 /*
@@ -957,5 +971,5 @@ func challenge11(input1: String, input2: String) -> Bool {
  The string “flip flap flop” should return “fl”.
  ”
 
- Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
