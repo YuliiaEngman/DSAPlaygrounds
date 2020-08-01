@@ -831,3 +831,131 @@ func challenge9(input: String) -> Bool {
 print(challenge9(input: "The quick brown fox jumps over the lazy dog"))
 
 print(challenge9(input: "The quick brown fox jumped over the lazy dog"))
+
+
+
+// Frequency Dictionary:
+
+//import Foundation to repl.it
+
+/*
+// Write a function that takes in an array of integers (arr) and a number (n)
+// You function should return an array with only numbers appearing n or more times.
+// Your solution must work in O(n) time.
+//
+// Example:
+// Input: [1,3,4,1,9,1,3,4,3,1,2], 3
+// Output: [1,3]
+*/
+
+// arr: [Int], num: Int -> [Int]
+// O(n): for loop or .contains
+// result >= n
+
+// var result = [Int]()
+// var count = 0
+// for num in arr
+//
+
+// dict [Int: Int]
+// 1:4, 3:3, 4:2, 9:1, 2:1
+
+/*
+// dictioary review
+// storing values in a dictionary from a given array
+for num in arr {
+  if let count = dict[num] {
+    dict[num] = count + 1 // increment
+  } else {
+    dict[num] = 1 // first time seeing number
+  }
+}
+return
+*/
+
+
+// 1:4, 3:3, 4:2, 9:1, 2:1
+
+/*
+// iterate through the dictionary to find out values
+// that appear n or more times
+for (key, value) in dict {
+  if value >= n {
+    result.append(key)
+  }
+}
+return result
+*/
+
+func challenge1(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
+  var result = [Int]()
+  //var count = 0
+  var dict = [Int: Int]()
+
+  // populate the dictionary
+  for num in arr {
+    if let count = dict[num] {
+      dict[num] = count + 1 // 1:2
+    } else {
+      dict[num] = 1 // 1:1, 3:1
+    }
+  }
+
+  //1:2, 3:1
+
+  // iterate through the dictionary to find out values
+  for (key, value) in dict {
+    if value >= n { // 2==2
+      result.append(key) //[1]
+    }
+  }
+
+  return result //[1]
+}
+
+print(challenge1(arr: [1, 1, 3], n: 2))
+
+print(challenge1(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
+
+/*
+ “Challenge 11: Three different letters
+ Difficulty: Tricky
+
+ Write a function that accepts two strings, and returns true if they are identical in length but have no more than three different letters, taking case and string order into account.
+
+ Sample input and output
+ The strings “Clamp” and “Cramp” would return true, because there is one letter difference.
+ The strings “Clamp” and “Crams” would return true, because there are two letter differences.
+ The strings “Clamp” and “Grams” would return true, because there are three letter differences.
+ The strings “Clamp” and “Grans” would ”“return false, because there are four letter differences.
+ The strings “Clamp” and “Clam” would return false, because they are different lengths.
+ The strings “clamp” and “maple” should return false. Although they differ by only one letter, the letters that match are in different positions.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge11(input1: String, input2: String) -> Bool {
+    
+    if input1.count == input2.count else {
+        
+    }
+    
+    return true
+}
+
+
+/*
+ “Challenge 12: Find longest prefix
+ Difficulty: Tricky
+
+ Write a function that accepts a string of words with a similar prefix, separated by spaces, and returns the longest substring that prefixes all words.
+
+ Sample input and output
+ The string “swift switch swill swim” should return “swi”.
+ The string “flip flap flop” should return “fl”.
+ ”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
+ */
