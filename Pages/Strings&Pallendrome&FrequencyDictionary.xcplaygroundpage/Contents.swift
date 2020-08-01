@@ -1012,3 +1012,16 @@ func challenge11(first: String, second: String) -> Bool {
 
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
+
+//разбить на отдельные слова и сравнивать их первые
+
+func challenge12(input: String) -> String {
+    
+    let arrOfStr = input.components(separatedBy: " ")
+    
+    for char in arrOfStr[0] {
+        
+    }
+    
+    
+    }
