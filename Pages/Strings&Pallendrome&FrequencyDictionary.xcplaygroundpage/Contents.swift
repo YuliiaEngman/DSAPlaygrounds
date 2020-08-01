@@ -948,7 +948,6 @@ func challenge11(input1: String, input2: String) -> Bool {
             }
         }
     }
-    
     return str2.count <= 3
 }
 
@@ -957,8 +956,48 @@ print(challenge11(input1: "Clamp", input2: "Crams"))
 print(challenge11(input1: "Clamp", input2: "Grams"))
 print(challenge11(input1: "Clamp", input2: "Grans"))
 print(challenge11(input1: "Clamp", input2: "Clam"))
-print(challenge11(input1: "clamp", input2: "maple"))
+print(challenge11(input1: "clamp", input2: "maple")) // my func does the main part but does not taking into consideration order of letters -> "taking case and string order into account"
 
+// Trying the solution with hints:
+
+/*
+“Solution
+This problem isn’t hard as long as you convert your strings into character arrays – if you don’t, you need to advance through string indices, which is never pleasant and certainly hard to do during an interview.
+
+The simplest, clearest way to solve this challenge is like so:
+
+Start with an early return in case the two strings have different lengths.
+Create arrays out of both strings.
+Initialize a differences counter to 0.
+Loop over the first array, using enumerated() so we get the current index as well as each character.
+Compare that character against the character at the same index in the other string array.
+If they are different, add one to differences.
+If as a result of that differences is now 4, return false.
+On the other hand, if we get to the end of the array, it means we can return true.
+Something like this ought to do the trick:
+
+func challenge11(first: String, second: String) -> Bool {
+    guard first.count == second.count else { return false }
+
+    let firstArray = Array(first)
+    let secondArray = Array(second)
+    var differences = 0
+
+    for (index, letter) in firstArray.enumerated() {
+        if secondArray[index] != letter {
+            differences += 1
+
+            if differences == 4 {
+                return false
+            }
+        }
+    }
+
+    return true
+}”
+ */
+
+//Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 
 /*
  “Challenge 12: Find longest prefix
