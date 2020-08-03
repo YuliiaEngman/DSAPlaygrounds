@@ -14,5 +14,7 @@
         <page name='QuickSort'/>
         <page name='BinaryTree-Breadth-first traversal'/>
         <page name='BinaryTree-Depth-firstTraversal'/>
+        <page name='HashTable'/>
+        <page name='Numbers'/>
     </pages>
 </playground>

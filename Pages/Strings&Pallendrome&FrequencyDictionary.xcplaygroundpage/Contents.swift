@@ -887,7 +887,7 @@ for (key, value) in dict {
 return result
 */
 
-func challenge1(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
+func challenge1c(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
   var result = [Int]()
   //var count = 0
   var dict = [Int: Int]()
@@ -913,9 +913,9 @@ func challenge1(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
   return result //[1]
 }
 
-print(challenge1(arr: [1, 1, 3], n: 2))
+print(challenge1c(arr: [1, 1, 3], n: 2))
 
-print(challenge1(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
+print(challenge1c(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
 
 /*
  “Challenge 11: Three different letters
