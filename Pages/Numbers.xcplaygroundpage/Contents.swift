@@ -80,24 +80,23 @@ print(challenge17(input1: 12, input2: 18))
 
 
 /*
- “Challenge 18: Recreate the pow() function
+ “Challenge 19: Swap two numbers
  Difficulty: Easy
 
- Create a function that accepts positive two integers, and raises the first to the power of the second.
-
- Tip: If you name your function myPow() or challenge18(), you’ll be able to use the built-in pow() for your tests. The built-in pow() uses doubles, so you’ll need to typecast.
+ Swap two positive variable integers, a and b, without using a temporary variable.!
 
  Sample input and output
- The inputs 4 and 3 should return 64, i.e. 4 multiplied by itself 3 times.
- The inputs 2 and 8 should return 256, i.e. 2 multiplied by itself 8 times.”
+ Before running your code a should be 1 and b should be 2; afterwards, b should be 1 and a should be 2.”
 
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
 
 
-func challenge18(base: Int, power: Int) -> Int {
+func challenge19(a: Int, b: Int) -> (a: Int, b: Int) {
+    let firstTupe = (a, b)
+    let resultTuple = (b, a)
     
-    for
-    
-    return
+    return resultTuple
 }
+
+print(challenge19(a: 1, b: 2))
