@@ -93,10 +93,16 @@ print(challenge17(input1: 12, input2: 18))
 
 
 func challenge19(a: Int, b: Int) -> (a: Int, b: Int) {
-    let firstTupe = (a, b)
-    let resultTuple = (b, a)
+    var a = a
+    var b = b
     
-    return resultTuple
+    a = a + b // sum a = 1 + 2 -> 3
+    b = a - b // b = 3 - 2 -> 1
+    a = a - b // a = 3 - 1 -> 2
+    
+    return (a, b)
 }
 
 print(challenge19(a: 1, b: 2))
+
+
