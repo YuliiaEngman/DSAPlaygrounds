@@ -137,4 +137,8 @@ func challenge20(input: Int) -> Bool {
     }
 }
 
-
+print(challenge20(input: 11)) // -> true
+print(challenge20(input: 13)) // -> true
+print(challenge20(input: 4)) // -> false
+print(challenge20(input: 9)) // -> false
+print(challenge20(input: 16777259)) -> true
