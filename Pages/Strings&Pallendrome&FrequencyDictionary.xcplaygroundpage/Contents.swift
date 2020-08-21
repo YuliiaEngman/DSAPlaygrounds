@@ -1079,3 +1079,30 @@ func challenge1(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
 print(challenge1(arr: [1, 1, 3], n: 2))
 
 print(challenge1(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
+
+// Using map
+
+func challenge1b(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
+  var result = [Int]()
+  //var count = 0
+  //var dict = [Int: Int]()
+
+  let mappedArr = arr.map {($0, 1)}
+  let dict = Dictionary(mappedArr, uniquingKeysWith: +)
+
+  //1:2, 3:1
+
+  // iterate through the dictionary to find out values
+  for (key, value) in dict {
+    if value >= n { // 2==2
+      result.append(key) //[1]
+    }
+  }
+
+  return result //[1]
+}
+
+
+print(challenge1b(arr: [1, 1, 3], n: 2))
+
+print(challenge1b(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
