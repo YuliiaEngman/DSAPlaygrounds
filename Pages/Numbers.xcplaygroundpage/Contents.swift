@@ -106,3 +106,35 @@ func challenge19(a: Int, b: Int) -> (a: Int, b: Int) {
 print(challenge19(a: 1, b: 2))
 
 
+/*
+ “Challenge 20: Number is prime
+ Difficulty: Tricky
+
+ Write a function that accepts an integer as its parameter and returns true if the number is prime.
+
+ Tip: A number is considered prime if it is greater than one and has no positive divisors other than 1 and itself.
+
+ Sample input and output
+ The number 11 should return true.
+ The number 13 should return true.
+ The number 4 should return false.
+ The number 9 should return false.
+ The number 16777259 should return true.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge20(input: Int) -> Bool {
+    
+    if input > 1 && input % 2 != 0 {
+        if input % 3 != 0 && input % 5 != 0 {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+
