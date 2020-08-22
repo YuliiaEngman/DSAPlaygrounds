@@ -180,3 +180,29 @@ print(challenge23(input: "123456789")) // -> true
 print(challenge23(input: "9223372036854775808")) // -> true
 print(challenge23(input: "1.01")) // -> false
 
+/*
+ 
+ fastest solution:
+ 
+ “func challenge23a(input: String) -> Bool {
+     return UInt(input) != nil
+ }”
+ 
+ Another way:
+ 
+ “func challenge23b(input: String) -> Bool {
+     for letter in input {
+         if Int(String(letter)) == nil {
+             return false
+         }
+     }
+
+     return true
+ }
+ As you can see, you can create integers from strings, and strings from characters, but you can’t create integers from characters – d’oh (can use built-in func).”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
