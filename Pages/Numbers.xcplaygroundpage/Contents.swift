@@ -126,7 +126,7 @@ print(challenge19(a: 1, b: 2))
 
 func challenge20(input: Int) -> Bool {
     
-    if input > 1 && input % 2 != 0 {
+    if input >= 1 && input % 2 != 0 { // or > 0
         if input % 3 != 0 && input % 5 != 0 {
             return true
         } else {
@@ -141,4 +141,5 @@ print(challenge20(input: 11)) // -> true
 print(challenge20(input: 13)) // -> true
 print(challenge20(input: 4)) // -> false
 print(challenge20(input: 9)) // -> false
-print(challenge20(input: 16777259)) -> true
+print(challenge20(input: 16777259)) // -> true
+print(challenge20(input: 1)) // -> true
