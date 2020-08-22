@@ -126,7 +126,7 @@ print(challenge19(a: 1, b: 2))
 
 func challenge20(input: Int) -> Bool {
     
-    if input > 1 && input % 2 != 0 { // or > 0
+    if input > 1 && input % 2 != 0 { // or >= 2
         if input % 3 != 0 && input % 5 != 0 {
             return true
         } else {
@@ -144,3 +144,39 @@ print(challenge20(input: 9)) // -> false
 print(challenge20(input: 16777259)) // -> true
 print(challenge20(input: 1)) // -> false
 print(challenge20(input: 2)) // -> false
+
+
+/*
+ “Challenge 23: Integer disguised as string
+ Difficulty: Tricky
+
+ Write a function that accepts a string and returns true if it contains only numbers, i.e. the digits 0 through 9.
+
+ Sample input and output
+ The input “01010101” should return true.
+ The input “123456789” should return true.
+ The letter “9223372036854775808” should return true.
+ The letter “1.01” should return false; “.” is not a number.
+ ”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+// want to use built in func isNumber - work just for 1 character!
+func challenge23(input: String) -> Bool {
+    
+    var intCount = [Character]()
+    
+    for i in input {
+        if i.isNumber {
+            intCount.append(i)
+        }
+    }
+    return intCount.count == input.count
+}
+
+print(challenge23(input: "01010101")) // -> true
+print(challenge23(input: "123456789")) // -> true
+print(challenge23(input: "9223372036854775808")) // -> true
+print(challenge23(input: "1.01")) // -> false
+
