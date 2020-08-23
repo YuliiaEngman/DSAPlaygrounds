@@ -206,3 +206,35 @@ print(challenge23(input: "1.01")) // -> false
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
 
+
+/*
+ “Challenge 24: Add numbers inside a string
+ Difficulty: Tricky
+
+ Given a string that contains both letters and numbers, write a function that pulls out all the numbers then returns their sum.
+
+ Sample input and output
+ The string “a1b2c3” should return 6 (1 + 2 + 3).
+ The string “a10b20c30” should return 60 (10 + 20 + 30).
+ The string “h8ers” should return “8”.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge24(input: String) -> Int {
+    
+    var sum = 0
+    
+    for i in input {
+        if i.isNumber {
+            sum += Int(String(i))!
+        } else {
+            continue
+        }
+    }
+    return sum
+}
+
+print(challenge24(input: "a1b2c3")) // 6
+print(challenge24(input: "a10b20c30"))
+
