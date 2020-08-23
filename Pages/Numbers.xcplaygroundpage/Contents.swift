@@ -236,5 +236,25 @@ func challenge24(input: String) -> Int {
 }
 
 print(challenge24(input: "a1b2c3")) // 6
-print(challenge24(input: "a10b20c30"))
+print(challenge24(input: "a10b20c30")) // The solution should be fixed!
+print(challenge24(input: "h8ers"))
+
+// Ok, so can I subsitute letters with + sign?
+
+func challenge24a(input: String) {
+    
+    var newInput = String()
+    
+    for letter in input {
+        if letter.isLetter {
+            newInput = newInput + "+"
+        } else if letter.isNumber {
+            newInput = newInput + String(letter)
+        }
+    }
+
+print(newInput)
+
+}
+
 
