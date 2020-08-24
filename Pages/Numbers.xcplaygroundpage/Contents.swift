@@ -257,4 +257,58 @@ print(newInput)
 
 }
 
+/*
+ “Let’s take a look at the simple solution first, which is hopefully similar to the one you came up with. The algorithm is this:
 
+ Create an empty string that represents the current number being read.
+ Create a sum value that contains the total of all numbers so far, initialized to 0.
+ Loop through every letter in the input string, converting the character to a String.
+ If we can convert that string to an integer, add it to the current number string.
+ Otherwise it’s not a number, so convert the current number string to an integer, or 0 if it’s an invalid integer, add it to the sum and clear the current number string.
+ Finally, convert any remaining value in the current number string to an integer, and add it to sum.
+ Return sum.
+ Here’s that list translated into code:
+
+ func challenge24a(string: String) -> Int {
+     var currentNumber = ""
+     var sum = 0
+
+     for letter in string {
+         let strLetter = String(letter)
+
+         if Int(strLetter) != nil {
+             currentNumber += strLetter
+         } else {
+             sum += Int(currentNumber) ?? 0
+             currentNumber = ""
+         }
+     }
+
+     sum += Int(currentNumber) ?? 0
+     return sum
+ }
+ ”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge24b(string: String) -> Int {
+    var currentNumber = ""
+    var sum = 0
+
+    for letter in string {
+        let strLetter = String(letter)
+
+        if Int(strLetter) != nil {
+            currentNumber += strLetter
+        } else {
+            sum += Int(currentNumber) ?? 0
+            currentNumber = ""
+        }
+    }
+
+    sum += Int(currentNumber) ?? 0
+    return sum
+}
+
+print(challenge24b(string: "a10b20c30"))
