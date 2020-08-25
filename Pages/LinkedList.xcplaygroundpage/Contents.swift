@@ -186,46 +186,46 @@ fellows.removeLast()
 //                          Questions: Linked List
 //=================================================================================
 
-class LLNode {
-  var value: Int
-  var next: LLNode?
-  init(_ value: Int) {
-    self.value = value
-  }
-}
-
-let node1 = LLNode(1)
-let node2 = LLNode(2)
-let node9 = LLNode(9)
-let node4 = LLNode(4)
-let node5 = LLNode(5)
-
-node1.next = node2
-node2.next = node9
-node9.next = node4
-node4.next = node5
+//class LLNode {
+//  var value: Int
+//  var next: LLNode?
+//  init(_ value: Int) {
+//    self.value = value
+//  }
+//}
+//
+//let node1 = LLNode(1)
+//let node2 = LLNode(2)
+//let node9 = LLNode(9)
+//let node4 = LLNode(4)
+//let node5 = LLNode(5)
+//
+//node1.next = node2
+//node2.next = node9
+//node9.next = node4
+//node4.next = node5
 
 // problem 1
 // Using the Linked List above, write a function that finds the largest number in a Linked List of Ints.
 // output: 9
 
-func largestNumber(_ node: LLNode) -> Int {
-  var node = node
-  var largestNum = node.value
-
-  while let next = node.next {
-    if largestNum < next.value {
-      largestNum = next.value
-    }
-
-    node = next
-  }
-
-  return largestNum
-}
-
-
-print(largestNumber(node1))
+//func largestNumber(_ node: LLNode) -> Int {
+//  var node = node
+//  var largestNum = node.value
+//
+//  while let next = node.next {
+//    if largestNum < next.value {
+//      largestNum = next.value
+//    }
+//
+//    node = next
+//  }
+//
+//  return largestNum
+//}
+//
+//
+//print(largestNumber(node1))
 
 
 // problem 2
@@ -243,3 +243,42 @@ print(largestNumber(node1))
 // Linked list has "Value"(Node) and "Connection"(Pointer)
 
 // Draw it out do not jump directly to the problem!!! Especially with bstract data structures.
+
+// Implement Node structure:
+
+
+// SINGLY LINKED LIST!
+class Node1<T> {
+    var value: T
+    var next: Node1?// connection(pointer)
+    
+    // noinitializer means no value itself
+    init(_ value: T) {
+        self.value = value
+    }
+}
+
+// implementing CustomStringConvertable to customize description of a Node
+
+extension Node1: CustomStringConvertible { // it will customize the description will be for us
+    var description: String {
+       // return ""
+        guard let next = next else {
+            return "\(value) -> nil" // 12 -> nil
+        }
+        // if we have connected nodes
+        return "\(value) -> \(next)" // next is a node and knows how to print itself
+    }
+}
+
+
+// instantiating node instances
+let car14 = Node1<Int>(14)
+let car98 = Node1<Int>(98)
+
+// link our nodes
+car14.next = car98
+
+// print the current state of the linked node
+print(car14)
+
