@@ -230,3 +230,16 @@ print(largestNumber(node1))
 
 // problem 2
 // https://leetcode.com/problems/reverse-linked-list/
+
+//*************************************************************
+
+// Linked List implemintation - repetition with Alex
+// Data structures build in Swift: arrays, dictionaries, set
+
+// If you want to create a data structior like stack, you have to build so called "abstract data structure" (it does not excist but you create it how you want it to be)
+// Also we are using generics, that whars with any data structures, not any since it can be mixed objects of different types
+
+// Linked list like set of cars on a train:
+// Linked list has "Value"(Node) and "Connection"(Pointer)
+
+// Draw it out do not jump directly to the problem!!! Especially with bstract data structures.
