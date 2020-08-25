@@ -312,3 +312,26 @@ func challenge24b(string: String) -> Int {
 }
 
 print(challenge24b(string: "a10b20c30"))
+
+// I am taking ny previouse func and fixing it:
+
+func challenge24Fixed(input: String) -> Int {
+    
+    var sum = 0
+    var currentNumberStr = ""
+    
+    for i in input {
+        if i.isNumber {
+            //sum += Int(String(i))!
+            currentNumberStr += String(i)
+        } else {
+            sum += Int(currentNumberStr) ?? 0
+            currentNumberStr = ""
+        }
+        sum += Int(currentNumberStr) ?? 0
+    }
+    return sum
+}
+
+print(challenge24b(string: "a10b20c30")) // Should get unswer 60
+
