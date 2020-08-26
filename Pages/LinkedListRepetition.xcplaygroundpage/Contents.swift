@@ -184,3 +184,17 @@ nodeW.next = nodeX
 nodeX.next = nodeY
 nodeY.next = nodeZ
 nodeZ.next = nil
+
+// part 2
+
+extension AlphabetNode: CustomStringConvertible {
+    var description: String {
+        
+        guard let next = next else {
+            return "\(value)"
+        }
+        return "\(value) \(next)"
+    }
+}
+
+print(nodeA)
