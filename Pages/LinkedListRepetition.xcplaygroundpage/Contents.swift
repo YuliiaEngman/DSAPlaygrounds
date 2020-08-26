@@ -19,6 +19,8 @@ import Foundation
 
 
 // SINGLY LINKED LIST!
+// It should be class, nit struct, because structs can’t have stored properties that reference themselves.
+
 class Node<T> {
     var value: T
     var next: Node?// connection(pointer)
@@ -120,42 +122,57 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 // 1) Create a linked list to lowercased English alphabet letters
 // 2) make an extension that will print it as 1 line separated by space
 
-class AlphabetNode {
-    var value: Character
+//class AlphabetNode {
+//    var value: Character
+//    var next: AlphabetNode?
+//
+//    init(_ value: Character) {
+//        self.value = value
+//    }
+//}
+
+/*
+“Hint #3: Even though this challenge uses alphabet letters, aim to make your class generic – it shows smart forward thinking, and is only fractionally harder than using a specific data type.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.*/
+
+// Generic would look like this:
+class AlphabetNode<T> {
+    var value: T
     var next: AlphabetNode?
     
-    init(_ value: Character) {
+    init(_ value: T) {
         self.value = value
     }
 }
 
 // Creating nodes
-let nodeA = AlphabetNode("a")
-let nodeB = AlphabetNode("b")
-let nodeC = AlphabetNode("c")
-let nodeD = AlphabetNode("d")
-let nodeE = AlphabetNode("e")
-let nodeF = AlphabetNode("f")
-let nodeG = AlphabetNode("g")
-let nodeH = AlphabetNode("h")
-let nodeI = AlphabetNode("i")
-let nodeJ = AlphabetNode("j")
-let nodeK = AlphabetNode("k")
-let nodeL = AlphabetNode("l")
-let nodeM = AlphabetNode("m")
-let nodeN = AlphabetNode("n")
-let nodeO = AlphabetNode("o")
-let nodeP = AlphabetNode("p")
-let nodeQ = AlphabetNode("q")
-let nodeR = AlphabetNode("r")
-let nodeS = AlphabetNode("s")
-let nodeT = AlphabetNode("t")
-let nodeU = AlphabetNode("u")
-let nodeV = AlphabetNode("v")
-let nodeW = AlphabetNode("w")
-let nodeX = AlphabetNode("x")
-let nodeY = AlphabetNode("y")
-let nodeZ = AlphabetNode("z")
+let nodeA = AlphabetNode<Character>("a")
+let nodeB = AlphabetNode<Character>("b")
+let nodeC = AlphabetNode<Character>("c")
+let nodeD = AlphabetNode<Character>("d")
+let nodeE = AlphabetNode<Character>("e")
+let nodeF = AlphabetNode<Character>("f")
+let nodeG = AlphabetNode<Character>("g")
+let nodeH = AlphabetNode<Character>("h")
+let nodeI = AlphabetNode<Character>("i")
+let nodeJ = AlphabetNode<Character>("j")
+let nodeK = AlphabetNode<Character>("k")
+let nodeL = AlphabetNode<Character>("l")
+let nodeM = AlphabetNode<Character>("m")
+let nodeN = AlphabetNode<Character>("n")
+let nodeO = AlphabetNode<Character>("o")
+let nodeP = AlphabetNode<Character>("p")
+let nodeQ = AlphabetNode<Character>("q")
+let nodeR = AlphabetNode<Character>("r")
+let nodeS = AlphabetNode<Character>("s")
+let nodeT = AlphabetNode<Character>("t")
+let nodeU = AlphabetNode<Character>("u")
+let nodeV = AlphabetNode<Character>("v")
+let nodeW = AlphabetNode<Character>("w")
+let nodeX = AlphabetNode<Character>("x")
+let nodeY = AlphabetNode<Character>("y")
+let nodeZ = AlphabetNode<Character>("z")
 
 // Connecting nodes
 nodeA.next = nodeB
@@ -198,3 +215,65 @@ extension AlphabetNode: CustomStringConvertible {
 }
 
 print(nodeA)
+
+/*
+ “Once you know that the print() function has a terminator parameter that lets you specify something other than a line break to use after the line is printed, this method is pretty straightforward:
+
+ Pick out the first node in the list using the start property and make that the current node.
+ While the current node is not nil, print out its value with a space for the terminator.
+ Update the current node to be equal to the value of its next property, thereby moving to the next element in the list.
+ That’s it! Here’s the code:
+
+ func printNodes() {
+     var currentNode = start
+
+     while let node = currentNode {
+         print(node.value, terminator: " ")
+         currentNode = node.next
+     }
+ }”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ 
+ Full Solution:
+ “class LinkedListNode<T> {
+     var value: T
+     var next: LinkedListNode?
+
+     init(value: T) {
+         self.value = value
+     }
+ }
+
+ class LinkedList<T> {
+     var start: LinkedListNode<T>?
+
+     func printNodes() {
+         var currentNode = start
+
+         while let node = currentNode {
+             print(node.value, terminator: " ")
+             currentNode = node.next
+         }
+     }
+ }
+
+ var list = LinkedList<Character>()
+ var previousNode: LinkedListNode<Character>? = nil
+
+ for letter in "abcdefghijklmnopqrstuvwxyz" {
+     let node = LinkedListNode(value: letter)
+
+     if let predecessor = previousNode {
+         predecessor.next = node
+     } else {
+         list.start = node
+     }
+
+     previousNode = node
+ }
+
+ list.printNodes()”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
+ */
