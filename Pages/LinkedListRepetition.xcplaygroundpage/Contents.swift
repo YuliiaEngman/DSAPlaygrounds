@@ -334,14 +334,24 @@ class LinkedList<T> {
     
     // append method - adds node to the end of the list
     public func append(_ value: T) {
+        // create a node
+        let newNode = Node(value)
         
+        // scenario 1: appending to an empty list
+        guard let lastNode = tail else {
+            // empty list
+            head = newNode
+            tail = head
+            return
+        }
     }
     
     
     
     // remove last method - removes the last node from the end of the list
-    
-    
-    
+
     
 }
+
+let fellows = LinkedList<String>()
+fellows.append("Oscar)
