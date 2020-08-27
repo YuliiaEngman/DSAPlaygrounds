@@ -353,5 +353,22 @@ class LinkedList<T> {
     
 }
 
+
+extension LinkedList: CustomStringConvertible {
+    
+    // this is computed property
+    // we cannot have stored property in extension
+    var description: String {
+        guard let head = head else {
+          return "empty list"
+        }
+        return "\(head)"
+    }
+}
+
+
 let fellows = LinkedList<String>()
-fellows.append("Oscar)
+fellows.append("Oscar")
+fellows.append("Tanya")
+
+print(fellows) // Oscar -> nil
