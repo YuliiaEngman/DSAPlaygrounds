@@ -277,3 +277,71 @@ print(nodeA)
 
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books. 
  */
+
+
+
+// ******************************************
+
+// LinkedList itself full implementation
+// has head and tail
+
+class LinkedList<T> {
+    var head: Node<T>? // nil, because we can have empty list
+    var tail: Node<T>? // nil, because we can have empty list
+    // we do not need initializer here because all of them have a value == nil
+    
+    
+    // Swift offers us two kinds of property: a stored property is one that saves a value for use later, and a computed property is one that runs some code in order to calculate the value
+    /*
+    struct Person {
+        var name = "Taylor"
+        var favoriteColor = "red"
+        var favoriteCity = "Tokyo"
+        var favoriteFood = "tea"
+
+        var greeting: String {
+            return "Hello, my name is \(name), and I like \(favoriteFood), \(favoriteCity), and the color \(favoriteColor)."
+        }
+    }
+ */
+    
+    // COMPUTED property -> Computed properties are always variables (never constants)
+    // Beware when using computed properties as their value might change each time you are calling them. Also, they can change any other value in their enclosing scope if a setter is used (more below)!!!
+    
+    // My basic understanding that computed property is a property that stores a value as a result of some calculation. Ex:
+    // var x = 10
+    // var y = 20
+    // var totalResult: Int {
+   // get {
+   //     return x+y
+   //  }
+// }
+    // print(totalResult) // 30
+    
+    // A cleaning up note: you don’t need to write get { } as long as you do not implement a setter. This will speed you the writing
+    
+   // Through set you can change the value of other properties in the same scope, reason why you have to be aware of all the dependencies linked to the computed property.
+    
+    // first computed property
+    public var first: Node<T>? {
+        return head
+    }
+    
+    // last computed property
+    public var last: Node<T>? {
+        return tail
+    }
+    
+    // append method - adds node to the end of the list
+    public func append(_ value: T) {
+        
+    }
+    
+    
+    
+    // remove last method - removes the last node from the end of the list
+    
+    
+    
+    
+}
