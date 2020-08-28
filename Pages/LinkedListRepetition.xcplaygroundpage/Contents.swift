@@ -109,6 +109,58 @@ print(car14)
  //}
  */
 
+// 1. Define a Node class
+// 2. Write a function that returns the largest number in a linked list.
+
+
+// do you want a node class be generic or not?
+//
+
+class Node2 {
+  var value: Int
+  var next: Node2?
+
+   init(_ value: Int) {
+     self.value = value
+   }
+}
+
+// 1 -> 3 -> 10 -> 7
+// return largest number -> create a var of type Int empty
+// loop through list and return largest value
+
+func largestInt(node: Node2?) -> Int? {
+ var largestNumber = Int.min // -89 -> -8 -> -23
+ var currentNode = node
+
+ guard let _ = node else { return nil }
+
+ while let nextNode = currentNode {
+   if largestNumber < nextNode.value {
+     largestNumber = nextNode.value
+   }
+   // infinite loop
+
+   // how do I get to 3 from 1
+   currentNode = nextNode.next
+
+ }
+ return largestNumber
+}
+
+let node1a = Node2(1)
+let node3 = Node2(3)
+let node10 = Node2(10)
+let node7 = Node2(7)
+
+node1a.next = node3
+node3.next = node10
+node10.next = node7
+//node7.next = nil
+
+print(largestInt(node: nil) ?? -1)
+
+
 /*
 “Challenge 43: Linked lists
 Difficulty: Easy
