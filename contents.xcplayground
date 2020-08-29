@@ -19,5 +19,6 @@
         <page name='BinaryTree-Depth-firstTraversal'/>
         <page name='HashTable'/>
         <page name='Numbers'/>
+        <page name='Array'/>
     </pages>
 </playground>
