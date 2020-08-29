@@ -22,5 +22,19 @@ func challenge37(input1: [Int], input2: Int) -> Int? {
     //let strFromArr: String = input1
     //let oneStr = strFromArr.replacingOccurrences(of: ", ", with: "")
     
-    return 0
+    let arrOfStr = input1.map { String($0) }
+    var strFromArr = ""
+    var result = ""
+    
+    
+    for num in arrOfStr {
+        strFromArr += num
+    }
+    
+    for strNum in strFromArr {
+        if strNum == Character(String(input2)) {
+            result += String(strNum)
+        }
+    }
+    return result.count
 }
