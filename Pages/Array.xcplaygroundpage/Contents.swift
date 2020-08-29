@@ -17,7 +17,7 @@ import Foundation
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
 
-func challenge37(input1: [Int], input2: Int) -> Int? {
+func challenge37(input1: [Int], input2: String) -> Int {
     
     //let strFromArr: String = input1
     //let oneStr = strFromArr.replacingOccurrences(of: ", ", with: "")
@@ -32,9 +32,14 @@ func challenge37(input1: [Int], input2: Int) -> Int? {
     }
     
     for strNum in strFromArr {
-        if strNum == Character(String(input2)) {
+        if strNum == Character(input2) {
             result += String(strNum)
         }
     }
     return result.count
 }
+
+print(challenge37(input1: [5, 15, 55, 515], input2: "5")) // expected 6
+print(challenge37(input1: [5, 15, 55, 515], input2: "1")) // expected 2
+print(challenge37(input1: [55555], input2: "5")) // expected 5
+print(challenge37(input1: [55555], input2: "1")) // expected 0
