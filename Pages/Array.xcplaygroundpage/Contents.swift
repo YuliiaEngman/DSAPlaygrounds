@@ -60,8 +60,14 @@ print(challenge37(input1: [55555], input2: "1")) // expected 0
  */
 
 func challenge38<T>(input1: [T], input2: Int) -> [T] {
-    return
+    let value = input1
+    let sortedArr = value.sorted(by: < )
+    
+   
+    return 
 }
+
+print(challenge38(input1: [1, 2, 3, 4], input2: 3))
 
 /*
  func f<T>(_ input: T) -> T {
