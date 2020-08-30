@@ -43,3 +43,32 @@ print(challenge37(input1: [5, 15, 55, 515], input2: "5")) // expected 6
 print(challenge37(input1: [5, 15, 55, 515], input2: "1")) // expected 2
 print(challenge37(input1: [55555], input2: "5")) // expected 5
 print(challenge37(input1: [55555], input2: "1")) // expected 0
+
+/*
+ “Challenge 38: Find N smallest
+ Difficulty: Easy
+
+ Write an extension for all collections that returns the N smallest elements as an array, sorted smallest first, where N is an integer parameter.
+
+ Sample input and output
+ The code [1, 2, 3, 4].challenge38(count: 3) should return [1, 2, 3].
+ The code ["q", "f", "k"].challenge38(count: 10) should return [“f”, “k”, “q”].
+ The code [256, 16].challenge38(count: 3) should return [16, 256].
+ The code [String]().challenge38(count: 3) should return an empty array.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+func challenge38<T>(input1: [T], input2: Int) -> [T] {
+    return
+}
+
+/*
+ func f<T>(_ input: T) -> T {
+     let value = input
+     return value
+ }
+
+ print(f(45))
+ print(f(false))
+ */
