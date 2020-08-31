@@ -205,3 +205,20 @@ func firstHalf(_ arr: [Int]) {
 }
 //Solution
 //The runtime is O(n) despite the fact that we only iterate through first half of the array.
+
+
+
+//Challenge 7
+
+//What is the runtime complexity of the given algorithm?
+
+func product(_ a: Int, _ b: Int) -> Int {
+  var sum = 0
+  for _ in 0..<b {
+    sum += a
+  }
+  return sum
+}
+//Solution
+//The runtime in this example is O(b).
+// For now I dont understand why it is O(b) solutin rather then Constant as in Challenge 4 line  for k in 0..<100 { // Constant
