@@ -64,7 +64,7 @@ func challenge38<T>(input1: [T], input2: Int) -> [T] {
     let sortedArr = value.sorted(by: < )
     
    
-    return 
+    return result
 }
 
 print(challenge38(input1: [1, 2, 3, 4], input2: 3))
