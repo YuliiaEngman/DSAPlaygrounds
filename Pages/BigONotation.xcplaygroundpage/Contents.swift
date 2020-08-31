@@ -172,3 +172,36 @@ func bar(arr: [Int]) {
     foo(arr: arr)
   }
 }
+
+
+//Challenge 4
+
+//What is the runtime complexity of the given algorithm?
+
+func printUnorderedPairs(_ arrA: [Int], _ arrB: [Int]) {
+  for i in 0..<arrA.count { // O(n)
+    for j in 0..<arrB.count { // O(m)
+      for k in 0..<100 { // Constant
+        if arrA[i] < arrB[j] {
+          print("\(arrA[i]), \(arrB[j]), \(k)")
+        }
+      }
+    }
+  }
+}
+
+//Solution
+//The runtime is O(ab) regardless of the third for loop, remember when it comes to calculating runtimes that we drop the constants.
+
+
+//Challenge 5
+
+//What is the runtime complexity of the given algorithm?
+
+func firstHalf(_ arr: [Int]) {
+  for i in 0..<arr.count / 2 {
+    print(arr[i])
+  }
+}
+//Solution
+//The runtime is O(n) despite the fact that we only iterate through first half of the array.
