@@ -1106,3 +1106,47 @@ func challenge1b(arr: [Int], n: Int) -> [Int] { //[1, 1, 3] n == 2
 print(challenge1b(arr: [1, 1, 3], n: 2))
 
 print(challenge1b(arr: [1,3,4,1,9,1,3,4,3,1,2], n: 3))
+
+
+
+
+
+/*
+Challenge 1
+
+Write a function that returns how many vowels are in a String
+
+Sample Input: "Hello there! How's it going?"
+
+Sample Output: 8
+*/
+
+/*
+input: String
+output: Int
+
+implement and initialize a constant array of all vowels
+implement and initialize a variable for vowels count (Int)
+
+for each letter in input string
+ if all vowels array cointaints letter
+  increate vowels count by 1
+
+ return vowels count
+*/
+
+// input: "Hello", output: 2 ("e", "o")
+func vowelsCounts(input: String) -> Int {
+  let allVowels = ["a", "e", "i", "o", "u", "y"]
+  var countVowels = 0
+
+  for letter in input {
+    if allVowels.contains(String(letter)) {
+      countVowels += 1
+    }
+  }
+
+  return countVowels
+}
+
+print(vowelsCounts(input: "Hello there! How's it going?"))
