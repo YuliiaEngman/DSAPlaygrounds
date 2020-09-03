@@ -20,5 +20,6 @@
         <page name='HashTable'/>
         <page name='Numbers'/>
         <page name='Array'/>
+        <page name='Dictionaries-LessonWithCameron'/>
     </pages>
 </playground>
