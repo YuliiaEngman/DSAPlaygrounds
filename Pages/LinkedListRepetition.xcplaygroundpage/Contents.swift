@@ -424,3 +424,88 @@ fellows.append("Oscar")
 fellows.append("Tanya")
 
 print(fellows) // Oscar -> nil
+
+
+
+// Retetition with Alex:
+
+/*
+// 1. Define Node class
+// 2. Write a function that returns the largest number in a linked list.
+*/
+
+/*
+1) Define Node Class (for Int) -> singly linked list
+-value
+-connection betveen nodes
+
+get sample on numbers
+assign numbers to nodes
+connect them together
+
+func (input a Node) will return Int (largest)
+ create a biggestInt variable that I will assign to minimum Int
+
+ looping through values of Linked list
+  and check the value with largest integer variable
+  if value will be > I will assign to largest variable
+
+ return largest integer
+*/
+
+// Step 1:
+
+class Node3 {
+  var value: Int
+  var next: Node3?
+
+  init(_ value: Int) {
+    self.value = value
+  }
+}
+
+/*
+looping through values of Linked list
+  and check the value with largest integer variable
+  if value will be > I will assign to largest variable
+  */
+
+func largetInt(node: Node3?) -> Int? {
+ var largestNumber = Int.min
+
+ // guard and check if node == nil, if nil continue
+ // guard let node == nil else { return nil }
+ guard var _  = node else {
+   return nil
+ }
+
+ var node = node
+
+ // 1 -> 2 -> 3 -> nil
+ //while node.next == next
+
+//  if let nextNode = node {
+
+//  }
+
+ while let nextNode = node {
+   if nextNode.value > largestNumber {
+     largestNumber = nextNode.value
+   }
+   // I need to get to another node nil node and reach eventually to nil
+   node = nextNode.next
+ }
+
+ // for loop - no need to
+
+ // for cannot be used on the Node class since it does not conform
+ // to Sequence protocol
+ return largestNumber
+}
+
+let node100 = Node3(100)
+let nodeMinus34 = Node3(-34)
+let node0 = Node3(0)
+
+
+
