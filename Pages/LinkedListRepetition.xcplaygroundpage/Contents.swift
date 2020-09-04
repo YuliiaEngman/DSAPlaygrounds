@@ -455,9 +455,9 @@ func (input a Node) will return Int (largest)
 
 // Step 1:
 
-class Node3 {
-  var value: Int
-  var next: Node3?
+class Node3 { // struct has default inializer and we would not need initialize it again
+  var value: Int // var, not let!
+  var next: Node3? // var, not let!
 
   init(_ value: Int) {
     self.value = value
@@ -470,37 +470,46 @@ looping through values of Linked list
   if value will be > I will assign to largest variable
   */
 
-func largetInt(node: Node3?) -> Int? {
- var largestNumber = Int.min
 
- // guard and check if node == nil, if nil continue
- // guard let node == nil else { return nil }
- guard var _  = node else {
-   return nil
- }
-
- var node = node
-
- // 1 -> 2 -> 3 -> nil
- //while node.next == next
-
-//  if let nextNode = node {
-
-//  }
-
- while let nextNode = node {
-   if nextNode.value > largestNumber {
-     largestNumber = nextNode.value
-   }
-   // I need to get to another node nil node and reach eventually to nil
-   node = nextNode.next
- }
-
- // for loop - no need to
-
- // for cannot be used on the Node class since it does not conform
- // to Sequence protocol
- return largestNumber
+// Remember about Indentation!!!!
+func largetInt(node: Node3?) -> Int? { // because I think it is good to guard aganst empty Node3 I need to have input parameter as optional type
+    // as well as return should be optional too
+    var largestNumber = Int.min
+    
+    // REVIEW GUARD STATEMENT
+    // guard and check if node == nil, if nil continue
+    // guard let node == nil else { return nil }
+    
+    guard var _  = node else { // here we unwraping optional
+        return nil
+    }
+    
+    var node = node // and on this line of code we are making node optional again! because down we have to use while loop and unwrap optional!!!
+    
+    // 1 -> 2 -> 3 -> nil
+    //while node.next == next
+    
+    //  if let nextNode = node {
+    
+    //  }
+    
+    while let nextNode = node { // while loop and unwrap optional!!!
+        // we cannot use "for loop" because Node class did not conform to Sequence protocol
+        // so we either have to conform it to this Protocol (I do not knwo how to do that) or use while loop
+        
+        if nextNode.value > largestNumber {
+            largestNumber = nextNode.value
+        }
+        // I need to get to another node and reach eventually to nil
+        // this line forses us to keep looping through
+        node = nextNode.next
+    }
+    
+    // for loop - no need to
+    
+    // for cannot be used on the Node class since it does not conform
+    // to Sequence protocol
+    return largestNumber
 }
 
 let node100 = Node3(100)
