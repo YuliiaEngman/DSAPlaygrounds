@@ -516,5 +516,30 @@ let node100 = Node3(100)
 let nodeMinus34 = Node3(-34)
 let node0 = Node3(0)
 
+/*
+“Challenge 43: Linked lists
+Difficulty: Easy
 
+Create a linked list of lowercase English alphabet letters, along with a method that traverses all nodes and prints their letters on a single line separated by spaces.
 
+Tip #1: This is several problems in one. First, create a linked list data structure, which itself is really two things. Second, use your linked list to create the alphabet. Third, write a method traverses all nodes and prints their letters.
+
+Tip #2: You should use a class for this. Yes, really.
+
+Tip #3: Once you complete your solution, keep a copy of the code – you’ll need it for future challenges!
+
+Sample input and output
+The output of your code should be the English alphabet printed to the screen, i.e. “a b c d … x y z”.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+// Step 1 -> define a node class
+class Node5 {
+    var value: String
+    var next: Node5?
+    
+    init(_ value: String) {
+        self.value = value
+    }
+}
