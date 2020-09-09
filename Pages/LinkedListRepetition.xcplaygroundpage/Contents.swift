@@ -543,3 +543,24 @@ class Node5 {
         self.value = value
     }
 }
+
+/*
+ “Hints
+ Hint #1: If your first instinct was to create your new data types as a struct, it shows you’re a sound Swift developer. Sadly, I’m afraid that approach won’t work here because structs can’t have stored properties that reference themselves.
+
+ Hint #2: Your second instinct might be to use an enum. This makes creation tricksy because you would need to change the associated value after creating the enum.
+
+ Hint #3: Even though this challenge uses alphabet letters, aim to make your class generic – it shows smart forward thinking, and is only fractionally harder than using a specific data type.
+
+ Hint #4: There are lots of hacky ways to loop over the alphabet. The only sensible way is to use "abcdefghijklmnopqrstuvwxyz" – it’s not hard to write, is self-documenting, and quite safe.
+
+ Hint #5: You should create two data types: one for a node, which contains its character and link to the next node in the list, and one for the overall linked list, which contains a property for the first node in the list as well as the print method.
+
+ Hint #6: The print() function has a terminator parameter.”
+
+ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+ */
+
+
+
+
