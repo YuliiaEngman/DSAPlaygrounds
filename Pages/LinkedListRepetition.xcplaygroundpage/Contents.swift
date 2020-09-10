@@ -562,5 +562,22 @@ class Node5 {
  */
 
 
+/*
+“Challenge 44: Linked list mid-point
+Difficulty: Easy
+
+Extend your linked list class with a new method that returns the node at the mid point of the linked list using no more than one loop.
+
+Tip: If the linked list contains an even number of items, returning the one before or the one after the center is acceptable.
+
+Sample input and output
+If the linked list contains 1, 2, 3, 4, 5, your method should return 3.
+If the linked list contains 1, 2, 3, 4, your method may return 2 or 3.
+If the linked list contains the English alphabet, your method may return M or N.”
+
+Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
+*/
+
+
 
 
