@@ -472,7 +472,7 @@ looping through values of Linked list
 
 
 // Remember about Indentation!!!!
-func largetInt(node: Node3?) -> Int? { // because I think it is good to guard aganst empty Node3 I need to have input parameter as optional type
+func largestInt2(node: Node3?) -> Int? { // because I think it is good to guard aganst empty Node3 I need to have input parameter as optional type
     // as well as return should be optional too
     var largestNumber = Int.min
     
@@ -515,6 +515,18 @@ func largetInt(node: Node3?) -> Int? { // because I think it is good to guard ag
 let node100 = Node3(100)
 let nodeMinus34 = Node3(-34)
 let node0 = Node3(0)
+
+node100.next = nodeMinus34
+nodeMinus34.next = node0
+
+print(largestInt2(node: node100) ?? 0)
+
+// Review of unwarpping with guard:
+// we can use guard inside func to unwrap optionals:
+
+func smallestIntInArr(arr: [Int]) {
+    
+}
 
 /*
 “Challenge 43: Linked lists
