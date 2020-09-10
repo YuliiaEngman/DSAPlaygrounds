@@ -524,9 +524,31 @@ print(largestInt2(node: node100) ?? 0)
 // Review of unwarpping with guard:
 // we can use guard inside func to unwrap optionals:
 
-func smallestIntInArr(arr: [Int]) {
+func smallestIntInArr(arr: [Int]) -> Int? {
     
+    // we could just use arr.min() but we will go longer way
+    
+    // let's use guard to unwrap the first value:
+    guard let firstValue = arr.first else {
+        // we also can usr "guard var" if needed
+        // remember "guard let .... else" and following return nil and just after that writing a code that will continue if returns not nil
+        print("the array is empty") // we have to print it before we return from the function
+        return nil// can not write "return nil" just "return"
+    }
+    // here we write the code if array is not empty
+    // and we have access to unwrapped value
+    
+    //we assign smallest the first value in the array
+    var smallest = firstValue
+    
+    for num in arr {
+        if num < smallest {
+            smallest = num
+        }
+    }
+    return smallest
 }
+print(smallestIntInArr(arr: []) ?? 0)
 
 /*
 “Challenge 43: Linked lists
