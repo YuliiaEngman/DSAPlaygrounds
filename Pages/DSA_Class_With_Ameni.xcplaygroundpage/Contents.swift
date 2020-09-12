@@ -58,3 +58,31 @@ Note:
 0 <= bills.length <= 10000
 bills[i] will be either 5, 10, or 20.
  */
+
+class Solution {
+    func lemonadeChange(_ bills: [Int]) -> Bool {
+        
+        var changeBills = [Int]()
+       
+        // I probably need to use contain
+       /*
+ for num in bills {
+            if num.first == 5 {
+                changeBills.append(num.first)
+                continue
+            } else if {
+                num[1] == changeBills || num[1] == 10 {
+                 changeBills.append(num[1])
+                    continue
+                }
+            }
+ */
+        
+        if num.first == 5 {
+            changeBills.append(num.first)
+        } else if changeBills.contain(num - 5) {
+            changeBills.remove(num)
+        }
+        
+    }
+}
