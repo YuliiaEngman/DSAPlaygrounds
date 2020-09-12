@@ -21,5 +21,6 @@
         <page name='Numbers'/>
         <page name='Array'/>
         <page name='Dictionaries-LessonWithCameron'/>
+        <page name='DSA_Class_With_Ameni'/>
     </pages>
 </playground>
