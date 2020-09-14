@@ -63,29 +63,17 @@ class Solution {
     func lemonadeChange(_ bills: [Int]) -> Bool {
         
         var changeBills = [Int]()
-       
+        
         // I probably need to use contain
-       /*
- for num in bills {
-            if num.first == 5 {
-                changeBills.append(num.first)
-                continue
-            } else if {
-                num[1] == changeBills || num[1] == 10 {
-                 changeBills.append(num[1])
-                    continue
-                }
+        
+        if bills.first == 5 {
+                changeBills.append(bills.first ?? 5)
+            } else {
+            return false
             }
- */
-        
-        if num.first == 5 {
-            changeBills.append(num.first)
-        } else if changeBills.contain(num - 5) {
-            changeBills.remove(num)
-        }
-        
-    }
 }
+
+
 
 
 
