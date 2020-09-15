@@ -59,6 +59,7 @@ Note:
 bills[i] will be either 5, 10, or 20.
  */
 
+/*
 class Solution {
     func lemonadeChange(_ bills: [Int]) -> Bool {
         
@@ -67,11 +68,50 @@ class Solution {
         // I probably need to use contain
         
         if bills.first == 5 {
-                changeBills.append(bills.first ?? 5)
-            } else {
+            changeBills.append(bills.first ?? 5)
+        } else {
             return false
-            }
+        }
+        
+        
 }
+ */
+
+
+    func lemonadeChange(_ bills: [Int]) -> Bool {
+        
+        var sumOfChange = [Int]()
+        
+        for bill in bills {
+            
+            if bill == 5 {
+                sumOfChange.append(5)
+            } else if bill == 10 && bills.contains(5){
+                sumOfChange.append(10)
+                let billForChangeIndex = bills.firstIndex(of: 5)
+                sumOfChange.remove(at: billForChangeIndex ?? 5)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
+    
+    print(lemonadeChange([5, 10, 20]))
+
+
+var array : [String]
+array = ["one","two","one"]
+
+let itemToRemove = "one"
+
+while array.contains(itemToRemove) {
+    if let itemToRemoveIndex = array.index(of: itemToRemove) {
+        array.remove(at: itemToRemoveIndex)
+    }
+}
+
+print(array)
 
 
 
