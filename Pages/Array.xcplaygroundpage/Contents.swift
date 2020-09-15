@@ -59,15 +59,15 @@ print(challenge37(input1: [55555], input2: "1")) // expected 0
  Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
  */
 
-func challenge38<T>(input1: [T], input2: Int) -> [T] {
-    let value = input1
-    let sortedArr = value.sorted(by: < )
-    
-   
-    return result
-}
-
-print(challenge38(input1: [1, 2, 3, 4], input2: 3))
+//func challenge38<T>(input1: [T], input2: Int) -> [T] {
+//    let value = input1
+//    let sortedArr = value.sorted(by: < )
+//
+//
+//    return result
+//}
+//
+//print(challenge38(input1: [1, 2, 3, 4], input2: 3))
 
 /*
  func f<T>(_ input: T) -> T {
@@ -78,3 +78,13 @@ print(challenge38(input1: [1, 2, 3, 4], input2: 3))
  print(f(45))
  print(f(false))
  */
+
+
+// Default parameter!!!
+
+func currentCohort(_ cohort: Double = 6.0) {
+    print("current cohort is \(cohort)")
+}
+
+currentCohort() // current cohort is 6.0
+currentCohort(7.0) // current cohort is 7.0
