@@ -78,43 +78,55 @@ class Solution {
  */
 
 
-    func lemonadeChange(_ bills: [Int]) -> Bool {
-        
-        var sumOfChange = [Int]()
-        
-        for bill in bills {
-            
-            if bill == 5 {
-                sumOfChange.append(5)
-            } else if bill == 10 && bills.contains(5){
-                sumOfChange.append(10)
-                let billForChangeIndex = bills.firstIndex(of: 5)
-                sumOfChange.remove(at: billForChangeIndex ?? 5)
-            } else {
-                return false
-            }
-        }
-        return true
-    }
+func lemonadeChange(_ bills: [Int]) -> Bool {
     
-    print(lemonadeChange([5, 10, 20]))
-
-
-var array : [String]
-array = ["one","two","one"]
-
-let itemToRemove = "one"
-
-while array.contains(itemToRemove) {
-    if let itemToRemoveIndex = array.index(of: itemToRemove) {
-        array.remove(at: itemToRemoveIndex)
+    var billsForChange = [Int]()
+    var sumOfChange = 0
+    
+    for bill in bills {
+        
+        if bill == 5 {
+            billsForChange.append(5)
+            sumOfChange += 5
+        } else if bill == 10 && sumOfChange % 5 == 0 { //or "bills.contains(5)"
+            billsForChange.append(10)
+            let billForChangeIndex = bills.firstIndex(of: 5)
+            billsForChange.remove(at: billForChangeIndex ?? 5)
+            sumOfChange += 5
+        } else if bill == 20 && billsForChange.contains(5) && billsForChange.contains(10) {
+            billsForChange.append(20)
+            let billForChangeIndex = bills.firstIndex(of: 5)
+            
+            let billForChangeIndex2 = bills.firstIndex(of: 10)
+            billsForChange.remove(at: billForChangeIndex2 ?? 10)
+            billsForChange.remove(at: billForChangeIndex ?? 5)
+            sumOfChange += 5
+            
+        } else if bill == 20 && billsForChange.contains(5) && billsForChange.contains(5) && billsForChange.contains(5) {
+            billsForChange.append(20)
+            let billForChangeIndex = bills.firstIndex(of: 5)
+            
+            let billForChangeIndex2 = bills.firstIndex(of: 5)
+            let billForChangeIndex3 = bills.lastIndex(of: 5)
+            billsForChange.remove(at: billForChangeIndex3 ?? 5)
+            billsForChange.remove(at: billForChangeIndex2 ?? 5)
+            billsForChange.remove(at: billForChangeIndex ?? 5)
+            sumOfChange += 5
+        } else {
+            return false
+        }
     }
+    return true
 }
-
-print(array)
-
-
-
+    
+print(lemonadeChange([5,5,5,10,20])) //true
+print(lemonadeChange([5,5,10])) //true
+//print(lemonadeChange([10,10])) //false
+print(lemonadeChange([5,5,10,10,20])) //false
+print(lemonadeChange([20,20])) //false
+print(lemonadeChange([5,5,10,20])) //true
+print(lemonadeChange([5,5,5,20])) //true
+print(lemonadeChange([5,5,10,5,5,5,20])) //true
 
 
 /*
