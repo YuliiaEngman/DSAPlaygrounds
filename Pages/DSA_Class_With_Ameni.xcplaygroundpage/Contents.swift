@@ -219,6 +219,42 @@ func makeChangeForFives2(_ customers: [Int]) -> Bool {
 print(makeChangeForFives2([5,5,5,10,5,10,20,5,10])) // true
 print(makeChangeForFives2([])) // true, because we do not have customers, we do not owe money to the customers and therefore we have enough change to everyone
 
+// trying to repeat "perfect" solution on my own
+
+func giveChangeForLemonade(bills: [Int]) -> Bool {
+    
+    // chearing count for fives and tens (I do not need count for twenties)
+    var fiveChange = 0
+    var tensChange = 0
+    
+    // now I will loop through array of bills:
+    
+    for bill in bills {
+        // I want to guard against no 5 change bill from beginning
+        guard fiveChange >= 0 else {
+            return false
+        }
+        switch bill {
+        case 5:
+            fiveChange += 1
+        case 10:
+            tensChange += 1
+            fiveChange -= 1
+        case 20:
+            // first way if I have 10 & 5 for change
+            if fiveChange >= 1 && tensChange >= 1 {
+                tensChange -= 1
+                fiveChange -= 1
+            } else if fiveChange >= 3 {
+                fiveChange -= 3
+            }
+        default:
+            return false
+        }
+    }
+    return true
+}
+
 
 /*
  MatrixSum
