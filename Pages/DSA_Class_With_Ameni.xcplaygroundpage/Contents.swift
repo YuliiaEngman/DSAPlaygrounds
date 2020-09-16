@@ -218,6 +218,7 @@ func makeChangeForFives2(_ customers: [Int]) -> Bool {
 }
 print(makeChangeForFives2([5,5,5,10,5,10,20,5,10])) // true
 print(makeChangeForFives2([])) // true, because we do not have customers, we do not owe money to the customers and therefore we have enough change to everyone
+print(makeChangeForFives2([10, 10]))
 
 // trying to repeat "perfect" solution on my own
 
@@ -243,17 +244,34 @@ func giveChangeForLemonade(bills: [Int]) -> Bool {
         case 20:
             // first way if I have 10 & 5 for change
             if fiveChange >= 1 && tensChange >= 1 {
+                //if tensChange >= 1 {
                 tensChange -= 1
                 fiveChange -= 1
+                // when I have 3 of fives
             } else if fiveChange >= 3 {
+                //} else {
                 fiveChange -= 3
             }
         default:
             return false
         }
+        //        guard fiveChange >= 0 else {
+        //                 return false
+        //             }
     }
     return true
 }
+
+print(makeChangeForFives2([5,5,5,10,5,10,20,5,10])) //true
+print(makeChangeForFives2([])) // true
+print(lemonadeChange([5,5,5,10,20])) //true
+print(lemonadeChange([5,5,10])) //true
+//print(lemonadeChange([10,10])) //false
+print(lemonadeChange([5,5,10,10,20])) //false
+print(lemonadeChange([20,20])) //false
+print(lemonadeChange([5,5,10,20])) //true
+print(lemonadeChange([5,5,5,20])) //true
+print(lemonadeChange([5,5,10,5,5,5,20])) //true
 
 
 /*
