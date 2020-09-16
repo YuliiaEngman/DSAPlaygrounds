@@ -128,6 +128,67 @@ print(lemonadeChange([5,5,10,20])) //true
 print(lemonadeChange([5,5,5,20])) //true
 print(lemonadeChange([5,5,10,5,5,5,20])) //true
 
+// Greg's real life interview solution:
+
+// item = $5
+// Array of customers, with 5, 10, or 20
+// [5, 10, 20, 5, 10]
+// Customers must remain in order
+// starting balance is $0
+// Each value is its own denomination
+// return true if everyone has correct change, return false if change is not able to be made for everyone
+// Array can be empty
+// Psuedo code
+/*
+Input: [Int], output: Bool
+protect an empty array, return true if empty
+Array variables for 5, 10, 20 (initial value 0), balance(?)
+Iterate through customers, determine the denomination they're paying, and check my balance if I have change for them
+If no change, return false, otherwise remove customer and continue
+Once the customers are done, I can return true
+*/
+// Input: [5, 5, 10]
+/*
+func makeChangeForFives(_ customers: [Int]?) -> Bool {
+    guard var customerArray = customers else { return true } // it should be let
+    var fives = [Int]()
+    var tens = [Int]()
+    var twenties = [Int]()
+    for customer in customerArray { // 10
+      switch customer {
+        case 5:
+        fives.append(customer) // fives = [5, 5]
+        case 10:
+        tens.append(customer) // tens = [10]
+        case 20:
+        twenties.append(customer)
+        default:
+        return false
+      }
+      var change = customer - 5 // 5
+      if change == 5 {
+        if !fives.isEmpty {
+          fives.dropLast // fives = [5]
+        } else if change == 15 {
+          if !tens.isEmpty {
+            if !fives.isEmpty { // change = Ten, five
+              tens.dropLast
+              fives.dropLast
+            } if fives.count > 3 { // here is a problem and should be fixed
+              fives.dropLast
+              fives.dropLast
+              fives.dropLast
+            } else {
+              return false
+            }
+          }
+        }
+      }
+    }
+    return true
+}
+ */
+
 
 /*
  MatrixSum
