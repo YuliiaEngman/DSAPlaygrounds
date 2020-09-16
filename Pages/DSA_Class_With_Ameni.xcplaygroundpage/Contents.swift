@@ -189,6 +189,36 @@ func makeChangeForFives(_ customers: [Int]?) -> Bool {
 }
  */
 
+// Best solution for this problem:
+func makeChangeForFives2(_ customers: [Int]) -> Bool {
+    var fives = 0
+    var tens = 0
+    
+    for customer in customers {
+      switch customer {
+        case 5:
+          fives += 1
+        case 10:
+          tens += 1
+          fives -= 1
+        case 20:
+          if tens > 0 { // I would write >= 1
+            tens -= 1
+            fives -= 1
+          } else {
+            fives -= 3 // -1 I owe you
+          }
+        default:
+          return false
+      }
+        guard fives >= 0 else { return false } // basically if after any math there is a minus of fives return false
+        // could I write that above? (before switch statement?)
+    }
+    return true
+}
+print(makeChangeForFives2([5,5,5,10,5,10,20,5,10])) // true
+print(makeChangeForFives2([])) // true, because we do not have customers, we do not owe money to the customers and therefore we have enough change to everyone
+
 
 /*
  MatrixSum
