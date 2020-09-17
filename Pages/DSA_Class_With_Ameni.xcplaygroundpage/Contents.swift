@@ -359,6 +359,25 @@ print(matrixSum(matrix: input))
  
  */
 
+// Ameni's solution:
+
+/*
+ func getMatrixSum(matrix: [[Int]]) -> Int {
+     var sum = 0
+     //O(n)
+     for i in 0..<matrix.count { // 0 1 2
+         for j in 0..<matrix[0].count { // 0 1 2 3
+          // make sure its not a corner
+             if (i == 0 || i == matrix.count - 1) && (j == 0 ||  j == matrix[0].count - 1 ){
+                 continue // skip
+             }
+             sum += matrix[i][j]
+         }
+     }
+     return sum
+ }
+ */
+
 
 
 
