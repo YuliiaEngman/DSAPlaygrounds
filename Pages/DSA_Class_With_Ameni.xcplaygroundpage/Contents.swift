@@ -378,7 +378,31 @@ print(matrixSum(matrix: input))
  }
  */
 
+// Ameni's solution for diagnol sum:
+
+/*
+func getDiagnolSum(_ matrix: [[Int]]) -> Int {
+    var sum = 0
+    for i in 0..<matrix.count { // 0, 1, 2
+        sum += matrix[i][i]
+        sum += matrix[i][matrix.count - 1 - i]
+        // i = 0, 2 - 0 = 2 -> [0][2]
+        // i = 1, 2 - 1 = 1 -> [1][1]
+    }
+    // 2, 1, 0
+    return sum
+}
+ */
 
 
 
 
+
+
+
+// No error
+// App icon 1024 X 1024 pixels - Icon set creator
+// Developer.apple.com + App Store Connect
+// Idenifier at app site -> This is bundle ID from xCode
+// SKU can be bundle ID
+// When you pushing again second and third time change the build
