@@ -325,7 +325,9 @@ print(lemonadeChange([5,5,10,5,5,5,20])) //true
  Output: 24
  */
 
+Matrix[matrix.count -1][matrix[0].count - 1]
 
+always ask in metrix is equal width and height? is it n by n or n by m?
 
 
 
