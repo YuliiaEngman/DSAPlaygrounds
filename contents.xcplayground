@@ -22,5 +22,6 @@
         <page name='Array'/>
         <page name='Dictionaries-LessonWithCameron'/>
         <page name='DSA_Class_With_Ameni'/>
+        <page name='Tuple'/>
     </pages>
 </playground>

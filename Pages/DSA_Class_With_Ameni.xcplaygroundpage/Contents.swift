@@ -291,5 +291,43 @@ print(lemonadeChange([5,5,10,5,5,5,20])) //true
  2 8 1 4
  */
 
+/*
+ Matrix/2D Arrays/Array of Arrays Problems
+
+ Easy
+
+ Tic Tac Toe Solution Checker
+
+ Given a 2D Array that might contain the following tree characters X, O, (space) in a Tic Tac Toe board determine the winning player and return it.
+
+ Example: For the following board the winner is X on the left to right diagonal
+
+ X    O    O
+ X    X
+ O    O    X
+ Sample I/O
+
+ Input: [ ['X', 'O', 'O'], ['X', 'X', ' '], ['O', 'O', 'X'] ]
+
+ Output: X
+
+ Sum of Diagonals on a 2D Array of integers
+
+ Find the sum of the diagonals of a square, two-dimensional array of integers
+
+ Input:
+
+ [
+  [1, 2, 9],
+  [8, 2, 3],
+  [4, 5, 6]
+ ]
+ Output: 24
+ */
+
+
+
+
+
 
 
