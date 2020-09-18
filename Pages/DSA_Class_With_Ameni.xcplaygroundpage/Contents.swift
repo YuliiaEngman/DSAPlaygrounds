@@ -331,6 +331,7 @@ print(lemonadeChange([5,5,10,5,5,5,20])) //true
 
 // Luba's solution:
 
+
 /*
 let input = [[1, 3, 9, 2],
              [3, 2, 0, 3],
@@ -359,8 +360,22 @@ print(matrixSum(matrix: input))
  
  */
 
+// When we write matrix.count -> we reffer to row
+// When we write matrix[0].count -> we reffer to column
+/*
+ let input = [[1, 3, 9, 2],
+ [3, 2, 0, 3],
+ [2, 8, 1, 4]]
+ 
+ we can present this matrix as: let input = [[1, 3, 9, 2], [3, 2, 0, 3], [2, 8, 1, 4]]
+ 
+ where matrix.count = 3 (3 arrays) and
+ matrix[0].count = 4 (4 integers inside first array under index 0)
+ */
+
 // Ameni's solution:
 
+// to better understand this so;ution we could imagine nsted loop -> arrays inside array
 /*
  func getMatrixSum(matrix: [[Int]]) -> Int {
      var sum = 0
@@ -400,9 +415,3 @@ func getDiagnolSum(_ matrix: [[Int]]) -> Int {
 
 
 
-// No error
-// App icon 1024 X 1024 pixels - Icon set creator
-// Developer.apple.com + App Store Connect
-// Idenifier at app site -> This is bundle ID from xCode
-// SKU can be bundle ID
-// When you pushing again second and third time change the build
