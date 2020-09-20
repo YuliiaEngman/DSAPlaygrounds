@@ -121,3 +121,26 @@ currentCohort(7.0) // current cohort is 7.0
     var input = [1,2,3,0,0,0]
     print(merge(&input, 3, [2,5,6], 3))
 
+
+// Input 2 arrays of Int [1, 2, 3] [2, 2, 0] => [2]
+// return 1 [Int] that contain matching Int
+
+func returnMatchingInt(input1: [Int], input2: [Int]) -> [Int] {
+    // if we can use built-in func I would use contains
+    
+    var result = [Int]()
+    
+    //let uniqArr = Set()
+    //let setInput2 = Set(input2)
+    
+    for num in Set(input1) {
+        if Set(input2).contains(num) {
+            result.append(num)
+        }
+    }
+    return result
+}
+
+print(returnMatchingInt(input1: [1, 2, 2, 3], input2: [2, 2, 0]))
+
+// merge into 1 and return that double and triples
