@@ -120,3 +120,48 @@ func someFunc(variableName: DataType) {
 // 2. find a value from a linked list and return the node
 // 3. https://leetcode.com/problems/merge-sorted-array/
 
+
+// Abstarct data struct
+
+class Node {
+    var value: Int // if its optional we may not need initializer
+    var next: Node?
+    
+    init(_ value: Int) {
+        self.value = value
+    }
+}
+
+func printNode(node: Node?) {
+    var currentNode = node
+    
+    while let currentNodeNotOptional = currentNode {
+        print(currentNodeNotOptional.value, terminator: " -> ")
+        currentNode = currentNodeNotOptional.next
+    }
+    print("nil")
+}
+
+//1 -> 2 -> 3 -> nil
+
+// I am creating
+let node1 = Node(1)
+let node2 = Node(2)
+let node3 = Node(3)
+
+node1.next = node2
+node2.next = node3
+
+printNode(node: node1)
+
+//print(node1)
+
+
+
+// Ask Alex or Cameron:
+
+// Is it the same to conform to Custom String convertable vs make a printFunc
+// to use for loop do we need to conform to IteratorSequence and write logic for it?
+// why Node in print func should be optional???
+
+

@@ -19,7 +19,7 @@ import Foundation
 
 
 // SINGLY LINKED LIST!
-// It should be class, nit struct, because structs can’t have stored properties that reference themselves.
+// It should be class, not struct, because structs can’t have stored properties that reference themselves.
 
 class Node<T> {
     var value: T
