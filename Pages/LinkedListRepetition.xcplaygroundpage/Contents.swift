@@ -668,10 +668,10 @@ func reverseList(_ node: NodeSinglyLL?) -> NodeSinglyLL? {
         // this line will be reversing the current next pointer
         // ->
         // <-
-        currentNode.next = previousNode // reversing
-        previousNode = currentNode //nil, 3, 1, 8
-        
-        
+        currentNode.next = previousNode // reversing // 333 (cn) 11 (pm)
+        previousNode = currentNode //nil, 333, 111, 8 // 11 = current
+
+
         // keep traversing the list
         node = nextNode
     }
