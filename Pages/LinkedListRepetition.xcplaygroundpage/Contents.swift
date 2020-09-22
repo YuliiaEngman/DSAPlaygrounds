@@ -625,5 +625,26 @@ class NodeSinglyLL {
     }
 }
 
+// write a func that prints all the values:
+
+let node101 = NodeSinglyLL(101)
+let node201 = NodeSinglyLL(201)
+let node301 = NodeSinglyLL(301)
+
+node101.next = node201
+node201.next = node301
+
+func printingLL(node: NodeSinglyLL?) {
+    var node = node
+    
+    while let currentNode = node {
+        print(currentNode.value, terminator: " -> ")
+        node = currentNode.next
+    }
+    print(nil)
+}
+
+printingLL(node: node101)
+
 
 
