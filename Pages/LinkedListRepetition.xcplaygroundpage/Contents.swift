@@ -614,4 +614,16 @@ Excerpt From: Paul Hudson. “Swift Coding Challenges.” Apple Books.
 
 
 
+// Reverse singly linked list:
+
+class NodeSinglyLL {
+    var value: Int
+    var next: NodeSinglyLL?
+    
+    init(_ value: Int) {
+        self.value = value
+    }
+}
+
+
 
