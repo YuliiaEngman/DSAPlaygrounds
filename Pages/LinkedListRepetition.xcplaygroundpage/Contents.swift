@@ -626,25 +626,67 @@ class NodeSinglyLL {
 }
 
 // write a func that prints all the values:
+// 333 -> 111 -> 8 -> nil
 
-let node101 = NodeSinglyLL(101)
-let node201 = NodeSinglyLL(201)
-let node301 = NodeSinglyLL(301)
+let node333 = NodeSinglyLL(333)
+let node111 = NodeSinglyLL(111)
+let node8 = NodeSinglyLL(8)
 
-node101.next = node201
-node201.next = node301
+node333.next = node111
+node111.next = node8
 
 func printingLL(node: NodeSinglyLL?) {
     var node = node
     
-    while let currentNode = node {
+    while let currentNode = node { // if current node is not nil
         print(currentNode.value, terminator: " -> ")
         node = currentNode.next
     }
-    print(nil)
+    print("nil")
 }
 
-printingLL(node: node101)
+printingLL(node: node333)
+
+// in this problem there is pointer manipulation being done
+// what does that mean?
+// current node point 333 -> 111
+// now: 333 -> 111 -> 8 -> nil
+// will we: 8 -> 111 -> 333 -> nil
+
+func reverseList(_ node: NodeSinglyLL?) -> NodeSinglyLL? {
+    // we need to pointers:
+    
+    var node = node
+    
+    var previousNode: NodeSinglyLL? // this is will be our reversed list returned
+    var nextNode: NodeSinglyLL? // temp node (why do we need that? if we have next in our Node class?)
+    
+    
+    while let currentNode = node {
+        nextNode = currentNode.next
+        // main part of this problem in at those following 2 lines
+        // this line will be reversing the current next pointer
+        // ->
+        // <-
+        currentNode.next = previousNode // reversing
+        previousNode = currentNode //nil, 3, 1, 8
+        
+        
+        // keep traversing the list
+        node = nextNode
+    }
+    
+    return previousNode // reverse nodes
+    
+}
+
+let modifiedNode = reverseList(node333)
+
+printingLL(node: modifiedNode)
+
+
+
+
 
 
 
