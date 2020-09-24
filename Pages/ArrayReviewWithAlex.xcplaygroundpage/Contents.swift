@@ -93,6 +93,9 @@ Challenge 88:
 // 3) Assuming that I can use build in functions I will use sort on result-array
 
 
+
+
+
 func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) -> [Int] {
     // 1) Assuming that m represent number of int from first arraey to merge I plan to create new array from nums 1 with integers that equal to m
     // I will use prefix build in func
@@ -113,7 +116,35 @@ func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) -> [I
 // and call the function ex doubleInPlace(number: &myNum)
 
 var firstArr = [1,2,3,0,0,0]
-print(mergeArrays(&firstArr, 3, [2,5,6], 3)) // result [1, 2, 2, 3, 5, 6]
+//print(mergeArrays(&firstArr, 3, [2,5,6], 3)) // result [1, 2, 2, 3, 5, 6]
+
+
+
+
+
+
+
+//I think I solved correctly but leetcode did not accept
+
+
+func mergeArrays2(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) -> [Int] {
+    // 1) Assuming that m represent number of int from first arraey to merge I plan to create new array from nums 1 with integers that equal to m
+    // I will use prefix build in func
+    
+    var resultArr = nums1[..<m]
+    
+    // 2) I plan to append second array to the first
+    
+    resultArr.append(contentsOf: nums2)
+    
+    //3) Assuming that I can use build in functions I will use sort on result-array
+    
+    return resultArr.sorted()
+}
+
+var firstArr22 = [1,2,3,0,0,0]
+print(mergeArrays(&firstArr22, 3, [2,5,6], 3))
+
 
 func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
     var writeIndex: Int = (n + m) - 1
@@ -147,13 +178,16 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
 }
 
 var firstArr2 = [1,2,3,0,0,0]
-print(merge(&firstArr2, 3, [2,5,6], 3))
+merge(&firstArr2, 3, [2,5,6], 3)
 
 
 // The best solution!
 func merge3(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
        nums1 = (nums1[..<m] + nums2).sorted()
    }
+
+var firstArr3 = [1,2,3,0,0,0]
+merge(&firstArr3, 3, [2,5,6], 3)
 
 
 
