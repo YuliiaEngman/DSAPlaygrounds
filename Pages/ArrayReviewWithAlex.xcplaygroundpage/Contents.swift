@@ -149,5 +149,13 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
 var firstArr2 = [1,2,3,0,0,0]
 print(merge(&firstArr2, 3, [2,5,6], 3))
 
+
+// The best solution!
+func merge3(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+       nums1 = (nums1[..<m] + nums2).sorted()
+   }
+
+
+
  
 
