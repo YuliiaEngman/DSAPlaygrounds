@@ -60,6 +60,24 @@ let heteroheneousArray: [Any] = [1, 2, 4.7, "Greg", true]
 
 // type casting different types
 
-for element in heteroheneousArray {
-    if let intValue = 
+//for element in heteroheneousArray {
+//    if let intValue =
+//}
+
+
+
+
+/*
+===============================================
+Challenge 88:
+ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+/*
+
+class Solution {
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        
+    
+    }
+ 
 }
