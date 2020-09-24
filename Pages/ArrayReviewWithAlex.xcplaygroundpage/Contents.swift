@@ -93,7 +93,7 @@ Challenge 88:
 // 3) Assuming that I can use build in functions I will use sort on result-array
 
 
-func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) -> [Int] {
     // 1) Assuming that m represent number of int from first arraey to merge I plan to create new array from nums 1 with integers that equal to m
     // I will use prefix build in func
     
@@ -105,7 +105,7 @@ func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
     
     //3) Assuming that I can use build in functions I will use sort on result-array
     
-    resultArr.sorted()
+    return resultArr.sorted()
 }
 
 // because my parameter num1 is mutable I need to use following syntax:
@@ -113,7 +113,7 @@ func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
 // and call the function ex doubleInPlace(number: &myNum)
 
 var firstArr = [1,2,3,0,0,0]
-mergeArrays(&firstArr, 3, [2,5,6], 3)
+print(mergeArrays(&firstArr, 3, [2,5,6], 3)) // result [1, 2, 2, 3, 5, 6]
 
  
 
