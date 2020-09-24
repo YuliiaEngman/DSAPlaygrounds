@@ -115,5 +115,39 @@ func mergeArrays(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) -> [I
 var firstArr = [1,2,3,0,0,0]
 print(mergeArrays(&firstArr, 3, [2,5,6], 3)) // result [1, 2, 2, 3, 5, 6]
 
+func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    var writeIndex: Int = (n + m) - 1
+    
+    var m = m - 1
+    var n = n - 1
+    
+    while m >= 0 && n >= 0 {
+        if (nums1[m] < nums2[n]) {
+            nums1[writeIndex] = nums2[n]
+            n -= 1
+            writeIndex -= 1
+        } else {
+            nums1[writeIndex] = nums1[m]
+            m -= 1
+            writeIndex -= 1
+        }
+    }
+    
+    while m >= 0 {
+        nums1[writeIndex] = nums1[m]
+        m -= 1
+        writeIndex -= 1
+    }
+    
+    while n >= 0 {
+        nums1[writeIndex] = nums2[n]
+        n -= 1
+        writeIndex -= 1
+    }
+}
+
+var firstArr2 = [1,2,3,0,0,0]
+print(merge(&firstArr2, 3, [2,5,6], 3))
+
  
 
