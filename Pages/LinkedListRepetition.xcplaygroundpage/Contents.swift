@@ -484,7 +484,7 @@ func largestInt2(node: Node3?) -> Int? { // because I think it is good to guard 
         return nil
     }
     
-    var node = node // and on this line of code we are making node optional again! because down we have to use while loop and unwrap optional!!!
+   var node = node // here we making a node property mutable
     
     // 1 -> 2 -> 3 -> nil
     //while node.next == next
@@ -668,7 +668,7 @@ func reverseList(_ node: NodeSinglyLL?) -> NodeSinglyLL? {
         // this line will be reversing the current next pointer
         // ->
         // <-
-        currentNode.next = previousNode // reversing // 333 (cn) 11 (pm)
+        currentNode.next = previousNode // reversing // 333 (cn) 111 (pm)
         previousNode = currentNode //nil, 333, 111, 8 // 11 = current
 
 
