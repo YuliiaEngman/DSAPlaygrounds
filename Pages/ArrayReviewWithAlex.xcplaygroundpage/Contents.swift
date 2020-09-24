@@ -92,10 +92,14 @@ Challenge 88:
 // 2) I plan to append second array to the first
 // 3) Assuming that I can use build in functions I will use sort on result-array
 
-class Solution {
+
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        // 1) Assuming that m represent number of int from first arraey to merge I plan to create new array from nums 1 with integers that equal to m
+        // I will use prefix build in func
+        
+        var resultArr = nums1.prefix(m)
         
     
     }
  
-}
+
