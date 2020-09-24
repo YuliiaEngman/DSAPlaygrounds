@@ -99,6 +99,9 @@ Challenge 88:
         
         var resultArr = nums1.prefix(m)
         
+        // 2) I plan to append second array to the first
+        
+        resultArr.append(contentsOf: nums2)
     
     }
  
