@@ -209,7 +209,30 @@ merge(&firstArr3, 3, [2,5,6], 3)
  [3,0,2,0,0,1,0,4]    [3,2,1,4,0,0,0,0], 4
  */
 
+// Sudocode:
+// I would look through array and compared all numbers to zero
+// Non-zero numbers I would put infront of new result-array + made count for non-zero numbers
+// zeros I would put to the back of array
+// returning tuple
 
+func returnZeros(input: [Int]) -> ([Int], Int) {
+    var resurtArr = [Int]()
+    var resultCount = 0
+    
+    for num in input {
+        if num < 0 || num > 0 {
+            resurtArr.insert(num, at: 0)
+            resultCount += 1
+        } else {
+            resurtArr.append(num)
+        }
+    }
+    
+    return (resurtArr, resultCount)
+}
+
+print(returnZeros(input: [3,0,2,0,0,1,0,4])) // ([4, 1, 2, 3, 0, 0, 0, 0], 4)
+// solved the challenge according to description, nut numbers are not in the same order as in output...
 
 
 
