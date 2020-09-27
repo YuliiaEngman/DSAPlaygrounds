@@ -422,13 +422,27 @@ func getDiagnolSum(_ matrix: [[Int]]) -> Int {
 
  Sample
 
- Input    Output
+ Input                         Output
  [3, 4, 6, 10, 11, 15]
  [1, 5, 8, 12, 14, 19, 31]    [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19, 31]
  */
 
+// Sudocode:
+// I have 2 sorted arrays as input
+// Should return 1 sorted array as output
+// My solution should work in O(n) time (ex. loop)
 
+// I think easiest would we to mreate 1 merged array and use .sorted() build-in func
 
+func sortedArr(arr1: [Int], arr2: [Int]) -> [Int] {
+    var resultArr = arr1
+    
+    resultArr.append(contentsOf: arr2)
+    
+    return resultArr.sorted() // runtime is O(n log n)
+}
+
+print(sortedArr(arr1: [3, 4, 6, 10, 11, 15], arr2: [1, 5, 8, 12, 14, 19, 31])) // [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19, 31]
 
 
 
