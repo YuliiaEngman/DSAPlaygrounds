@@ -444,6 +444,33 @@ func sortedArr(arr1: [Int], arr2: [Int]) -> [Int] {
 
 print(sortedArr(arr1: [3, 4, 6, 10, 11, 15], arr2: [1, 5, 8, 12, 14, 19, 31])) // [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19, 31]
 
+/*
+ProductOfThree
+
+Difficulty    Tags    Solution Link
+Medium    [Arrays, Products, Integers]    To Do
+Problem Description
+
+Given an array of at least three integers, return the largest product you can get by multiplying three numbers together.
+
+Samples
+
+Input    Output
+[3, 5, 1, 2, 8]    120
+-10, -4, 2, 3, 5   200
+ */
+
+
+// Sudocode:
+// This is really interesting challenge:
+// I have a few scenarios:
+// 1) tho find biggest positive numbers in array and their product will be largest product
+// 2) if two of three numbers are negative they can be a members of largest product
+// I think I need to check at least few paramethers:
+// - check if there 2 or more negative numbers
+// -so far that is all i can guess
+
+
 
 
 
