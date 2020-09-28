@@ -470,6 +470,17 @@ Input    Output
 // - check if there 2 or more negative numbers
 // -so far that is all i can guess
 
+func productOfThree(input: [Int]) -> Int {
+    // will work case by case
+    
+    var product = Int()
+    
+    for num in input.sorted() {
+        
+    }
+    
+}
+
 
 
 
