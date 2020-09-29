@@ -165,3 +165,15 @@ printNode(node: node1)
 // why Node in print func should be optional???
 
 
+
+
+
+var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]] // dictionary literal
+// String is key and value is array of Doubles'
+
+//iterating through dictionary
+
+for (key, value) in cohorts { // instead of (key, value) we can use (stack, classes) where stack is key and classes is value
+    print("The \(stack) class has \(classes.count) classes \(classes)")
+    
+}
