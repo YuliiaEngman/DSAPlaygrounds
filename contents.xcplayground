@@ -25,5 +25,6 @@
         <page name='Tuple'/>
         <page name='ArrayReviewWithAlex'/>
         <page name='DictionaryReviewWithAlex'/>
+        <page name='Character'/>
     </pages>
 </playground>
