@@ -27,8 +27,25 @@ import Foundation
  You may assume k is always valid, 1 ≤ k ≤ array's length.
  */
 
-class Solution {
+// Sudocode:
+// If I can use build it func I would do following steps:
+// 1) Sorted array
+// 2) MAde it reverse
+// 3) Find correct index for the Int I am looking for
+
     func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+        let sortedArr = nums.sorted() // step 1 -> [1,2,3,4,5,6]
+       
+        // step 2
+     // I will not do reversed array but instead I will work with array indexes
+        // count is 6, I need to return 2nd element in array from back
         
+        var resultIndex = 0
+        
+        resultIndex = sortedArr.count - k
+        
+        return sortedArr[resultIndex]
     }
-}
+
+print(findKthLargest([3,2,1,5,6,4], 2)) // 5
+print(findKthLargest([3,2,3,1,2,4,5,5,6], 4)) // 4
