@@ -40,9 +40,13 @@ import Foundation
      // I will not do reversed array but instead I will work with array indexes
         // count is 6, I need to return 2nd element in array from back
         
-        var resultIndex = 0
+       // var resultIndex = 0
         
-        resultIndex = sortedArr.count - k
+        // resultIndex = sortedArr.count - k
+        
+        // Or:
+        
+        let resultIndex = sortedArr.count - k
         
         return sortedArr[resultIndex]
     }
