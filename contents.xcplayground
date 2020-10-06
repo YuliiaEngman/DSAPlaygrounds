@@ -27,5 +27,6 @@
         <page name='DictionaryReviewWithAlex'/>
         <page name='Character'/>
         <page name='DSA_Review_With_Alex'/>
+        <page name='Set'/>
     </pages>
 </playground>
