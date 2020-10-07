@@ -32,8 +32,11 @@ Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
 Output: true
  */
 
-class Solution {
+// Sudocode:
+// I thing that:
+// 1) I will loop trough array and create a frequancy dictionary (put number and show how many time it occures)
+// 2) And compare values.count of dictionary to the set of thouse values - if it equal, return true
     func uniqueOccurrences(_ arr: [Int]) -> Bool {
         
     }
-}
+
