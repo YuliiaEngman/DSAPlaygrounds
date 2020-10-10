@@ -129,3 +129,29 @@ print(frequencyChar("loveleetcode")) // returns 2
 print(frequencyChar("mamapapa")) // should return -1, for now returns 7 (now corrected)
 print(frequencyChar("mmmm")) // -1
 print(frequencyChar("m")) // should return 0
+
+// The most officiant solution:
+// other solution using `eumerated()` to find the index
+// as we iterate
+func firstNonRepeatingCharacter(_ inputString: String) -> Int {
+  var freqDict = [Character: Int]()
+  for char in inputString {
+    if let count = freqDict[char] {
+      freqDict[char] = count + 1
+    } else {
+      freqDict[char] = 1
+    }
+  }
+  for (index, char) in inputString.enumerated() {
+    if freqDict[char] == 1 {
+      return index
+    }
+  }
+  return -1
+}
+
+print(firstNonRepeatingCharacter("leetcode")) // returns 0
+print(firstNonRepeatingCharacter("loveleetcode")) // returns 2
+print(firstNonRepeatingCharacter("mamapapa")) // should return -1,
+print(firstNonRepeatingCharacter("mmmm")) // -1
+print(firstNonRepeatingCharacter("m")) // should return 0
