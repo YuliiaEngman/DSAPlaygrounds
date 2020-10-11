@@ -178,12 +178,17 @@ func firstNonRepeatingChar(_ inputString: String) -> Int {
     
     var freqDict = [Character: Int]()
     
+    /*
     for char in inputString {
         if let count = freqDict[char] {
             freqDict[char] = count + 1
         } else {
             freqDict[char] = 1
         }
+    }
+ */
+    for char in inputString {
+        freqDict[char] = (freqDict[char] ?? 0) + 1 // Ask Alex if this is good practice to use this code...
     }
     
     // now I need to combile sr=tring and dict
