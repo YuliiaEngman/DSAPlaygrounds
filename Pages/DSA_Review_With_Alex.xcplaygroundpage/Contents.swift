@@ -155,3 +155,51 @@ print(firstNonRepeatingCharacter("loveleetcode")) // returns 2
 print(firstNonRepeatingCharacter("mamapapa")) // should return -1,
 print(firstNonRepeatingCharacter("mmmm")) // -1
 print(firstNonRepeatingCharacter("m")) // should return 0
+
+
+/*
+ REPEATING THE CHALLENGE:
+Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+
+Examples:
+
+s = "leetcode"
+return 0.
+
+s = "loveleetcode"
+return 2.
+ 
+
+Note: You may assume the string contains only lowercase English letters.
+*/
+
+func firstNonRepeatingChar(_ inputString: String) -> Int {
+    // create and populate the dictionary:
+    
+    var freqDict = [Character: Int]()
+    
+    for char in inputString {
+        if let count = freqDict[char] {
+            freqDict[char] = count + 1
+        } else {
+            freqDict[char] = 1
+        }
+    }
+    
+    // now I need to combile sr=tring and dict
+    for (index, char) in inputString.enumerated() {
+        if freqDict[char] == 1 {
+            return index
+        }
+    }
+    return -1 // Ask Alex how previus func overrides this
+}
+
+print(firstNonRepeatingChar("leetcode")) // returns 0
+print(firstNonRepeatingChar("loveleetcode")) // returns 2
+print(firstNonRepeatingChar("mamapapa")) // should return -1,
+print(firstNonRepeatingChar("mmmm")) // -1
+print(firstNonRepeatingChar("m")) // should return 0
+/*
+ can I use this from Luba's example?
+ */
