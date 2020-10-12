@@ -144,3 +144,53 @@ func returnMatchingInt(input1: [Int], input2: [Int]) -> [Int] {
 print(returnMatchingInt(input1: [1, 2, 2, 3], input2: [2, 2, 0]))
 
 // merge into 1 and return that double and triples
+
+/*
+448. Find All Numbers Disappeared in an Array
+Easy
+
+3332
+
+264
+
+Add to List
+
+Share
+Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+
+Find all the elements of [1, n] inclusive that do not appear in this array.
+
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+
+Example:
+
+Input:
+[4,3,2,7,8,2,3,1]
+
+Output:
+[5,6]
+ */
+
+class Solution {
+    // Sudocode:
+    // I have an array of Ints (range) and need tofind Int that are not apperaed as input but are in range
+    // Ex.: input [1, 2, 5], output will be 3, 4
+    // I would sorth the array first
+    // I would loop through array starting from first index and check all Int + 1
+    // I would create an empty result array
+    
+    func findDisappearedNumbers(_ nums: [Int]) -> [Int] {
+        var resultArr = [Int]()
+        let sortedInputArr = nums.sorted()
+        let range = (sortedInputArr.last + 1) - sortedInputArr.first
+        
+        for num in sortedInputArr {
+            if sortedInputArr[1] = num + 1
+            continue
+        } else {
+            resultArr.append(num)
+        }
+        
+        
+    }
+}
