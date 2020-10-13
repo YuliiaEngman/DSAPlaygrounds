@@ -69,3 +69,16 @@ func isPangram(_ sentanceToCheck: String) -> Bool {
 print(isPangram("The quick brown fox jumps over the lazy dog")) // true
 print(isPangram("Some sentance that is not a Pangram")) // false
 
+// solving this challenge usin .contains() function:
+
+func isPangram2(_ sentanceToCheck: String) -> Bool {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    let lowercasedSentance = sentanceToCheck.lowercased()
+    
+    return lowercasedSentance.contains(alphabet)
+}
+
+print(isPangram("The quick brown fox jumps over the lazy dog")) // true
+print(isPangram("Some sentance that is not a Pangram")) // false
+
+
