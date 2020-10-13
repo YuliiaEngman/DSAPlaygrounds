@@ -35,6 +35,8 @@ print(noteContains("aa", "ab")) // false
 print(noteContains("aa", "aab")) // true
 print(noteContains("aa", "baa")) // true
 
+
+//=================================================================================================//
 /*
  Roy wanted to increase his typing speed for programming contests. His friend suggested that he type the sentence
  "The quick brown fox jumps over the lazy dog" repeatedly. This sentence is known as a pangram because it contains
@@ -44,3 +46,26 @@ print(noteContains("aa", "baa")) // true
 
  Given a sentence, determine whether it is a pangram. Ignore case.
  */
+
+// Sudocode:
+// I need to find out if the String contains all the letters from alphabet
+// I think that I need to create a constant that contains all the letters from alphabet and looping through the String that all of them there
+
+func isPangram(_ sentanceToCheck: String) -> Bool {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    let lowercasedSentance = sentanceToCheck.lowercased()
+    
+    for letter in alphabet {
+        if lowercasedSentance.contains(letter) {
+            continue
+        } else {
+            return false
+        }
+    }
+    
+    return true
+}
+
+print(isPangram("The quick brown fox jumps over the lazy dog")) // true
+print(isPangram("Some sentance that is not a Pangram")) // false
+
