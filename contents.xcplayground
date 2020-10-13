@@ -28,5 +28,6 @@
         <page name='Character'/>
         <page name='DSA_Review_With_Alex'/>
         <page name='Set'/>
+        <page name='String'/>
     </pages>
 </playground>
