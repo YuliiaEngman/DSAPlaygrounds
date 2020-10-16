@@ -56,7 +56,7 @@ func frequentlyDict(input: [Int]) -> [Int: Int] {
 print(frequentlyDict(input: arr))
 
 func frequentlyDictKey(input: [Int]) -> Int? {
-  // here I want to protect my code form empty input //guard against empy array
+  // here I want to protect my code form empty input //guard against empty array
   guard !input.isEmpty else {
     return nil
   }
@@ -86,8 +86,8 @@ func frequentlyDictKey(input: [Int]) -> Int? {
  // find the kay and value
  // [3: 7, 4: 2, 5: 1, 1: 2, 2: 3]
 
-  var largestValue = input[0] // (key, value) // use first elelment in hte array
-  var largestKey = 0
+    var largestValue = Int.min // (key, value) // use first elelment in the array // am I sure that we using array here and not dictionary?
+    var largestKey = Int.min
 
   for (key, value) in result {
     if largestValue < value { // 1 < 7
@@ -190,3 +190,55 @@ for num in array {
 }
 
 print(freqDict)
+
+
+// Given an array of values, return the value that appears most frequently.
+// If there are multiple values, any of the most frequent values is fine.
+// So:
+//   mostCommonInteger([1, 2, 1, 4, 2, 2, 2, 4]) -> 2
+//   mostCommonInteger([1, 1, 2, 2]) -> 1
+
+
+// Sudocode: (Psuedo-code)
+// input is arr of Int
+// output -> Int most frequent
+// create an empty dict and populate it
+// go through dict and return key that has the largest value
+
+func mostCommonInteger(numbers : [Int]) -> Int {
+
+  // 1) create an empty dict and populate it
+  var freqDict = [Int: Int]()
+ 
+  for num in numbers {
+    if let count = freqDict[num] {
+      freqDict[num] = count + 1
+    } else {
+      freqDict[num] = 1
+    }
+  }
+
+ // [5, 1, 1, 2, 3, 3, 3, 3, 3]
+  // [1: 2, 2: 1, 3: 5] -> need to return 3
+
+  // I need to create 2 properties:
+  // 1 for key
+  // 2 for value
+
+  var largestValue = Int.min // we will start from min value
+  var largestKey = Int.min
+
+  for (key, value) in freqDict {
+      // DON'T DO WHAT I'm ABOUT TO TYPE, IT IS NOT FOR THIS PROBLEM
+      // maxValue = Math.Max(maxValue, freqDict[key]);
+
+      if largestValue < value {
+        largestValue = value
+        largestKey = key
+      }
+  }
+
+  return largestKey // should get return 3 (key, not value)
+}
+
+print(mostCommonInteger(numbers : [5, 1, 1, 2, 3, 3, 3, 3, 3]))
