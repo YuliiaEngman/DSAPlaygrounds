@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
-        <page name='Generics&amp;Stacks'/>
-        <page name='LinkedListRepetition'/>
-        <page name='LinkedListClassWithCameron'/>
-        <page name='LinkedList'/>
-        <page name='Queues'/>
-        <page name='RecursionClassWithCameron'/>
-        <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
-        <page name='Strings&amp;Pallendrome&amp;FrequencyDictionary'/>
+        <page name='Array'/>
         <page name='BigONotation'/>
         <page name='BinarySearch'/>
         <page name='BubbleSort'/>
-        <page name='InsertionSort'/>
-        <page name='MergeSort'/>
-        <page name='QuickSort'/>
         <page name='BinaryTree-Breadth-first traversal'/>
         <page name='BinaryTree-Depth-firstTraversal'/>
-        <page name='HashTable'/>
-        <page name='Numbers'/>
-        <page name='Array'/>
-        <page name='Dictionaries-LessonWithCameron'/>
-        <page name='DSA_Class_With_Ameni'/>
-        <page name='Tuple'/>
-        <page name='ArrayReviewWithAlex'/>
-        <page name='DictionaryReviewWithAlex'/>
         <page name='Character'/>
+        <page name='DictionaryReviewWithAlex'/>
+        <page name='Dictionaries-LessonWithCameron'/>
         <page name='DSA_Review_With_Alex'/>
-        <page name='Set'/>
+        <page name='DSA_Class_With_Ameni'/>
+        <page name='HashTable'/>
+        <page name='Generics&amp;Stacks'/>
+        <page name='InsertionSort'/>
+        <page name='LinkedListRepetition'/>
+        <page name='LinkedListClassWithCameron'/>
+        <page name='LinkedList'/>
+        <page name='MergeSort'/>
+        <page name='Numbers'/>
+        <page name='Queues'/>
+        <page name='RecursionClassWithCameron'/>
+        <page name='Recursion&amp;Fibonacci&amp;Tribonacci'/>
         <page name='String'/>
+        <page name='Strings&amp;Pallendrome&amp;FrequencyDictionary'/>
+        <page name='Set'/>
+        <page name='Tuple'/>
+        <page name='QuickSort'/>
     </pages>
 </playground>

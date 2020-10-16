@@ -685,6 +685,44 @@ let modifiedNode = reverseList(node333)
 printingLL(node: modifiedNode)
 
 
+// ================= LinkedList Review ==================== //
+
+/*
+1. Implement a Node class
+2. Create a series of Nodes e.g 1 -> 2 -> 3
+3. Write a function that takes a Node and prints out all the values of a the given Node (List)
+*/
+
+class Node {
+  var value: Int
+  var next: Node?
+
+  init(_ value: Int) {
+    self.value = value
+  }
+}
+
+let node1 = Node(1)
+let node2 = Node(2)
+let node3 = Node(3)
+
+node1.next = node2
+node2.next = node3
+
+// print 1->2->3
+func printNode(input: Node?) {
+
+  var input = input
+
+  while let currentNode = input {
+    print("\(currentNode.value)")
+    input = currentNode.next
+  }
+}
+
+printNode(input: node1) // I do not need to print, since I am using function itself to print
+
+
 
 
 

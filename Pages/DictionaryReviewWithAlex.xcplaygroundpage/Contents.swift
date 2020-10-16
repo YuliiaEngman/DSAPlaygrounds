@@ -167,13 +167,26 @@ printNode(node: node1)
 
 
 
+// ================ Populate Dictionary ================== //
 
-var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]] // dictionary literal
-// String is key and value is array of Doubles'
+// 3 ways:
 
-//iterating through dictionary
+let array = [1, 2, 2, 3, 1, 1, 3]
+var freqDict = [Int: Int]()
+for num in array {
 
-for (key, value) in cohorts { // instead of (key, value) we can use (stack, classes) where stack is key and classes is value
-    print("The \(stack) class has \(classes.count) classes \(classes)")
+    // Way #1:
+  // if let count = freqDict[num] {
+  //   freqDict[num] = count + 1
+  // } else {
+  //   freqDict[num] = 1
+  // }
     
+    // Way #2:
+     //freqDict[num] = (freqDict[num] ?? 0) + 1
+    
+    // Way #3:
+    //freqDict[num, default: 0] += 1
 }
+
+print(freqDict)
