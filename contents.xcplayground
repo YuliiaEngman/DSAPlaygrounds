@@ -28,5 +28,6 @@
         <page name='Set'/>
         <page name='Tuple'/>
         <page name='QuickSort'/>
+        <page name='InterviewQuestions'/>
     </pages>
 </playground>

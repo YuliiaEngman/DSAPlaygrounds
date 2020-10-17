@@ -199,7 +199,7 @@ print(freqDict)
 //   mostCommonInteger([1, 1, 2, 2]) -> 1
 
 
-// Sudocode: (Psuedo-code)
+// Sudocode: (Psuedo-code) // comes from Greek
 // input is arr of Int
 // output -> Int most frequent
 // create an empty dict and populate it
