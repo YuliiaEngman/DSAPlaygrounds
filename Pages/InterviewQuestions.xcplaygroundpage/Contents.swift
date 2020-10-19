@@ -18,22 +18,25 @@ import Foundation
 // DON'T scared -> go look your old code
 // thinking about better names
 // avoid numbers and names
+// for functions give names in form of verbs!!!
+// func ==(arrayLeft: [Int])
+
 
 // findDuplicates(in arr1...)
 func duplicatesInt(arr1: [Int], arr2: [Int]) -> [Int] {
   
-
   // result
   var resultArr = [Int]()
 
-  let setFromArr = Set(arr1) // [1, 2, 3] // - O(n)
-  let setTwoFromArr = Set(arr2) // 2, 3, 4 // - O(n)
-  // compar numbers across arrays
+  let setFromArr = Set(arr1) // [1, 2, 3] // - O(n) to trasnform array to set
+  let setTwoFromArr = Set(arr2) // 2, 3, 4 // - O(n) to trasnform array to set
+  
+    // compar numbers across arrays
   for num in setFromArr { // [1, 2, 3]// - O(n)
-    if setTwoFromArr.contains(num) { // - O(1)
-      resultArr.append(num) // [2, 3]  // - O(1)
+    if setTwoFromArr.contains(num) { // - O(1) -> linear
+      resultArr.append(num) // [2, 3]  // - O(1) -> linear
     }
-    // if duplicate add to result
+    // if duplicates add to result
   }
 
   return resultArr // [2, 3]
@@ -41,20 +44,20 @@ func duplicatesInt(arr1: [Int], arr2: [Int]) -> [Int] {
 
 print(duplicatesInt(arr1: [1, 2, 2, 3], arr2: [2, 3, 4]))
 
-func ==(arrayLeft: [Int])
+
 
 
 
 // ============== Certification From Twitter (Interview #2) =========== //
 
-//
-// Given a string str, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
+
+// Given a string str, a duplicate removal consists of choosing two adjacent (соседний) and equal letters, and removing them.
 
 // We repeatedly make duplicate removals on S until we no longer can.
 
 // Return the final string after all such duplicate removals have been made. It is guaranteed the answer is unique.
 
-// let input = "bookkeeper""bookkeeper"""
+// let input = "bookkeeper"
 // let expectedOutput = "bper"
 // let input = "aaabbaca"
 // "aaabbaca" , stack is empty
@@ -84,6 +87,8 @@ func ==(arrayLeft: [Int])
 // stack.popLast()
 
 
+/* My ugly code during the interview
+ 
 let input = "abbaca"
 
 func removeDuplicates(input: String) -> String {
@@ -103,3 +108,8 @@ func removeDuplicates(input: String) -> String {
 }
 
 print(removeDuplicates(input: input))
+ */
+
+
+// Trying to solve the question after the interview:
+
