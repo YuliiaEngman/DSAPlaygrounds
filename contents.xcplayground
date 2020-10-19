@@ -10,8 +10,6 @@
         <page name='Character'/>
         <page name='DictionaryReviewWithAlex'/>
         <page name='Dictionaries-LessonWithCameron'/>
-        <page name='DSA_Review_With_Alex'/>
-        <page name='DSA_Class_With_Ameni'/>
         <page name='HashTable'/>
         <page name='Generics&amp;Stacks'/>
         <page name='InsertionSort'/>
@@ -27,7 +25,10 @@
         <page name='Strings&amp;Pallendrome&amp;FrequencyDictionary'/>
         <page name='Set'/>
         <page name='Tuple'/>
+        <page name='Untitled Page'/>
         <page name='QuickSort'/>
+        <page name='Review_With_Alex'/>
+        <page name='Review_With_Ameni'/>
         <page name='InterviewQuestions'/>
     </pages>
 </playground>
