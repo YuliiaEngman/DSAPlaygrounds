@@ -113,3 +113,24 @@ print(removeDuplicates(input: input))
 
 // Trying to solve the question after the interview:
 
+// giving "good" names:
+
+func removeAdjacentDuplacates(in str: String) -> String {
+    
+    var resultStr = ""
+    
+    for char in str { // "bookkeeper"
+        if char == resultStr.last { // 3. comes here
+            resultStr.popLast()     // 4. drops "o" -> "b"
+        } else {
+            resultStr.append(char) // 1.first comes here and appends "b"
+                                   // 2. comes here again and appemds "o" -> "bo"
+        }
+    }
+    return resultStr
+}
+
+// let input = "bookkeeper"
+// let expectedOutput = "bper"
+
+print(removeAdjacentDuplacates(in: "bookkeeper")) // "bper"
