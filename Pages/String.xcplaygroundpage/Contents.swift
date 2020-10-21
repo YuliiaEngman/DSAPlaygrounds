@@ -82,3 +82,4 @@ print(isPangram("The quick brown fox jumps over the lazy dog")) // true
 print(isPangram("Some sentance that is not a Pangram")) // false
 
 
+// ========================= Challenges ====================== //
