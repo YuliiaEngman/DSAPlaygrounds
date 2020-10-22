@@ -457,3 +457,22 @@ class Solution {
         
     }
 }
+
+
+// ====================== Reverse Array Challenge ================ //
+
+/*
+ unction Description
+ Complete the function reverseArray in the editor below.
+ reverseArray has the following parameter(s):
+ int A[n]: the array to reverse
+ Returns
+ int[n]: the reversed array
+
+ */
+
+// Complete the reverseArray function below.
+func reverseArray(a: [Int]) -> [Int] {
+
+
+}
