@@ -434,6 +434,7 @@ Output:
 [5,6]
  */
 
+/*
 class Solution {
     // Sudocode:
     // I have an array of Ints (range) and need tofind Int that are not apperaed as input but are in range
@@ -457,12 +458,13 @@ class Solution {
         
     }
 }
+ */
 
 
 // ====================== Reverse Array Challenge ================ //
 
 /*
- unction Description
+ Function Description
  Complete the function reverseArray in the editor below.
  reverseArray has the following parameter(s):
  int A[n]: the array to reverse
@@ -473,6 +475,13 @@ class Solution {
 
 // Complete the reverseArray function below.
 func reverseArray(a: [Int]) -> [Int] {
-
-
+    var resultArr = [Int]()
+    
+    for num in a {
+        resultArr.insert(num, at: 0)
+    }
+    
+    return resultArr
 }
+
+print(reverseArray(a: [1, 4, 3, 2])) // should return [2, 3, 4, 1]
