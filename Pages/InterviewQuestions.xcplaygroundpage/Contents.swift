@@ -118,12 +118,16 @@ print(removeDuplicates(input: input))
 func removeAdjacentDuplacates(in str: String) -> String {
     
     var resultStr = ""
+    // ALWAYS think about empty input
+    // think about smallest input
+    // think about tricky example
+    
     
     for char in str { // "bookkeeper"
         if char == resultStr.last { // 3. comes here
-            resultStr.removeLast()  // 4. drops "o" -> "b"
+            resultStr.removeLast()  // 4. drops "o" -> "b" // poping from string
         } else {
-            resultStr.append(char) // 1.first comes here and appends "b"
+            resultStr.append(char) // 1.first comes here and appends "b"  // push to the stack
                                    // 2. comes here again and appemds "o" -> "bo"
         }
     }
@@ -134,6 +138,10 @@ func removeAdjacentDuplacates(in str: String) -> String {
 // let expectedOutput = "bper"
 
 print(removeAdjacentDuplacates(in: "bookkeeper")) // "bper"
+print(removeAdjacentDuplacates(in: ""))
+print(removeAdjacentDuplacates(in: "bb"))
+print(removeAdjacentDuplacates(in: "abba"))
+
 
 // remember difference between popLast and remove last:
 //removeLast crashes if the collection is empty. It also has a discardable result. popLast() returns an optional, so it can be nil; removeLast() returns the last element, not optional, so it will crash if the array is empty.
