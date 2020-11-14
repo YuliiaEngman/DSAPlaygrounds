@@ -236,7 +236,6 @@ print("\(colorArray[0]), \(colorArray[1]), and \(colorArray[4]) are some of my f
 
  var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 
- Solution
  */
   var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 westernStates.removeLast(2)
@@ -249,8 +248,18 @@ print(westernStates)
  Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not in the continental United States.
 
  let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+*/
+ let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
 
- Solution
+for state in moreStates {
+    if state == "Hawaii" {
+        print("\(state): is not in the continental United State")
+    } else {
+        print("\(state): is in the continental United State")
+    }
+}
+
+/*
  Question 4
 
  Print out how many non-whitespace characters are in myString:
