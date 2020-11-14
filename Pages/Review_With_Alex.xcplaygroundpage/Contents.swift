@@ -237,6 +237,13 @@ print("\(colorArray[0]), \(colorArray[1]), and \(colorArray[4]) are some of my f
  var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 
  Solution
+ */
+  var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+westernStates.removeLast(2)
+print(westernStates)
+ 
+ 
+ /*
  Question 3
 
  Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not in the continental United States.
