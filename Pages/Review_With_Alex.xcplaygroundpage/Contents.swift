@@ -208,3 +208,168 @@ print(firstNonRepeatingChar("m")) // should return 0
 /*
  can I use this from Luba's example?
  */
+
+
+
+//////////////////////
+/*
+ Collection Types - Array Exercises
+
+ Question 1
+
+ Create an array of strings called colors that contain "orange", "red", "yellow", "turquoise", and "lavender".
+
+ Then, using array subscripting and string interpolation, print out the String "orange, yellow, and lavender are some of my favorite colors".
+
+ Solution:
+ */
+
+
+let colorArray = ["orange", "red", "yellow", "turquoise", "lavander"]
+print("\(colorArray[0]), \(colorArray[1]), and \(colorArray[4]) are some of my favorite colors")
+
+/*
+ 
+ Question 2
+
+ Remove "Illinois" and "Kansas" from the array below.
+
+ var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+
+ Solution
+ Question 3
+
+ Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not in the continental United States.
+
+ let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+ Solution
+ Question 4
+
+ Print out how many non-whitespace characters are in myString:
+
+ let myString = "This is good practice with Strings!"
+
+ Solution
+ Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
+
+ let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]
+
+ Solution
+ Question 5
+
+ Iterate through garden and place any 🌷 that you find into the basket. Replace any 🌷 that you pick up with "dirt". Then print how many 🌷 are in your basket.
+
+ var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
+ var basket = [String]()
+ Solution
+ Question 6
+
+ The below array represents an unfinished batting lineup for a baseball team. You, the coach, need to make some last minute changes:
+
+ Add "Suzuki" to the end of your lineup.
+ Change "Jeter" to "Tejada".
+ Change "Thomas" for "Guerrero"
+ Put "Reyes" to bat 8th instead.
+ var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]
+
+ Solution
+ Question 7
+
+ Given an array of Ints, find out if it contains a target number.
+
+ (The built-in contains(_:) function will do this, but you aren't allowed to use it for this exercise.)
+
+ var numbers: [Int]
+
+ let target: Int = 32
+ Ex.1
+
+ numbers = [4,2,6,73,32,4,2,1]
+
+ target = 32
+
+ //true
+ Solution
+ Ex. 2
+
+ numbers = [32459,2,4,5,1,4,2,1]
+
+ target = 3
+
+ //false
+ Solution
+ Question 8
+
+ Find the largest value in an array of Int. Do not use the built-in max() method.
+
+ let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int($0)}
+
+ //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
+ Solution
+ Question 9
+
+ Find the smallest value in an array of Int. Do not use the built in min() method.
+
+ let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int($0)}
+
+ //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
+ Solution
+ Question 10
+
+ Iterate through secondListOfNumbers, and print out all the odd numbers.
+
+ var secondListOfNumbers = [19,13,14,19,101,10000,141,404]
+
+ Solution
+ Question 11
+
+ Iterate through thirdListOfNumbers, and print out the sum.
+
+ var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
+
+ Solution
+ Question 12
+
+ Iterate through thirdListOfNumbers, and print out the sum of all the even numbers.
+
+ var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
+
+ Solution
+ Question 13
+
+ Append every Int that appears in both listOne and listTwo to the sharedElements array. Then print how many Ints are shared.
+
+ Assumption: both arrays are of equal length.
+
+ Constraints: you cannot use Sets
+
+ var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
+ var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
+ var sharedElements = [Int]()
+ Solution
+ Question 14
+
+ Write code such that noDupeList has all the same Ints as dupeFriendlyList, but has no more than one of each Int.
+
+ Constraints: you cannot use Sets
+
+ var dupeFriendlyList = [4,2,6,2,2,6,4,9,2,1]
+ var noDupeList: [Int] = []
+ Solution
+ Question 15
+
+ Find the second smallest number in an Array of Ints
+
+ let arrayOfNumbers = [-6, 13, 0, 34, 0, 45, -12, 9, 11, 4]
+
+ Solution
+ Question 16
+
+ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+ Find the sum of all the multiples of 3 or 5 below 1000.
+
+ Solution
+
+ */
