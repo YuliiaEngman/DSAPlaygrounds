@@ -265,8 +265,14 @@ for state in moreStates {
  Print out how many non-whitespace characters are in myString:
 
  let myString = "This is good practice with Strings!"
+*/
+ let myString = "This is good practice with Strings!"
 
- Solution
+let arrFromStr = Array(myString)
+let arrWithoutSpaces = arrFromStr.joined(separator: " ")
+print(arrWithoutSpaces.count)
+ 
+ /*
  Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
 
  let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]
