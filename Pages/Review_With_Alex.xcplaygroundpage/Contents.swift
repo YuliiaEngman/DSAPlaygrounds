@@ -268,10 +268,11 @@ for state in moreStates {
 */
  let myString = "This is good practice with Strings!"
 
-let arrFromStr = Array(myString)
-let arrWithoutSpaces = arrFromStr.
-print(arrWithoutSpaces.count)
+//let arrOfChar = myString)
+let arrStr = [myString].joined(separator: " ")
+let countOfChar = arrStr.count
 
+print(countOfChar)
 
 
 
