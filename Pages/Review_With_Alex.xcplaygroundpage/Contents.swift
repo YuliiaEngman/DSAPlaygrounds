@@ -260,7 +260,7 @@ for state in moreStates {
 }
 
 /*
- Question 4
+ Question 4 // Requires solution
 
  Print out how many non-whitespace characters are in myString:
 
@@ -285,6 +285,10 @@ print(countOfChar)
  let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]
 
  Solution
+ 
+ */
+
+/*
  Question 5
 
  Iterate through garden and place any 🌷 that you find into the basket. Replace any 🌷 that you pick up with "dirt". Then print how many 🌷 are in your basket.
@@ -292,6 +296,22 @@ print(countOfChar)
  var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
  var basket = [String]()
  Solution
+ */
+
+var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
+var basket = [String]()
+
+for (index, item) in garden.enumerated() {
+    if item == "🌷" {
+        basket.append(item)
+        garden[index] = "dirt"
+    }
+}
+
+print("There are \(basket.count) flowers in my basket. And in the garden left just: \(garden)")
+ 
+ /*
+ 
  Question 6
 
  The below array represents an unfinished batting lineup for a baseball team. You, the coach, need to make some last minute changes:
