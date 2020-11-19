@@ -62,12 +62,14 @@ switch appInfo {
  default:
  print("I'm not quite sure what you are looking at")
 }
-appInfo.0 hasn't released yet
-myCoolApp hasn't released yet
-Thanks for looking at myCoolApp!
-I'm not quite sure what you are looking at
-It will give a compile-time error
-Solution
+ 
+//appInfo.0 hasn't released yet
+//myCoolApp hasn't released yet
+//Thanks for looking at myCoolApp!
+//I'm not quite sure what you are looking at
+//It will give a compile-time error
+
+ Solution: myCoolApp hasn't released yet, Thanks for looking at myCoolApp!
  
  
 Question 3
