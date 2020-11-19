@@ -26,7 +26,29 @@ A
 B
 C
 D
-Solution
+ 
+Solution: A, C, D
+ */
+ 
+ let conditionOne = !(4 < 5) || !(3 > 8) // false or true
+ let conditionTwo = !(!true) // true
+ 
+ if conditionOne { // prints A
+  print("A")
+ } else if conditionTwo {
+  print("B")
+ }
+ if conditionTwo { // prints C
+  print("C")
+ }
+ print("D") // prints D
+
+// should print A, C, D
+ 
+ 
+ */
+
+/*
 Question 2
 
 What will the code block below print? Select all that apply:
@@ -46,6 +68,8 @@ Thanks for looking at myCoolApp!
 I'm not quite sure what you are looking at
 It will give a compile-time error
 Solution
+ 
+ 
 Question 3
 
 What will be printed to the console when the code below is run? Select all that apply.
@@ -66,6 +90,8 @@ B
 C
 D
 Solution
+ 
+ 
 Question 4
 
 What are the errors in the code below for the switch statement? Select all that apply.
@@ -85,6 +111,8 @@ No opening and closing brackets in each of the cases
 No default case in the switch statement
 No print statement right outside the switch statement
 Solution
+ 
+ 
 Question 5
 
 Given the current weather conditions (rain, sunny, snow), use a switch statement to print an appropriate message to the user
@@ -93,6 +121,8 @@ let currentWeather = "rain"
 
 // enter code below
 Solution
+ 
+ 
 Question 6
 
 Given the first name and last name of a Fellow, declare a variable fullName and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
@@ -102,6 +132,8 @@ let lastName = "Appleseed"
 
 // enter code below
 Solution
+ 
+ 
 Question 7
 
 Convert the if/else statement below into a switch statement.
@@ -118,6 +150,8 @@ if temperatureInFahrenheit <= 40 {
 
 //Re-written statement here
 Solution
+ 
+ 
 Question 8
 
 Complete the following code so that "You win!" is printed.
@@ -129,6 +163,8 @@ else {
  print("You lose!")
 }
 Solution
+ 
+ 
 Question 9
 
 Given a variable called numberOfSides, write code using a switch so that it prints out the name of the shape. Account for shapes with 3 to 10 sides and print an error message if out of range.
@@ -151,6 +187,8 @@ var numberOfSides = 2
 Output:
 Error
 Solution
+ 
+ 
 Question 10
 
 Create a switch statement that will convert a number grade into a letter grade as shown below:
@@ -163,6 +201,8 @@ Numeric Score     Letter Grade
 65 - 69     D
 Below 65     F
 Solution
+ 
+ 
 Question 11
 
 What is wrong with the block of code below? Correct it so it behaves as expected.
@@ -176,12 +216,16 @@ if firstName == "Peter" {
 }
 let fullName = firstName + " " + lastName
 Solution
+ 
+ 
 Question 12
 
 Write an if statement that prints out what decade of life someone is in (e.g "You are in your twenties). Then, write it as a switch statement.
 
 let nameAndBirthYear: (String, Int)
 Solution
+ 
+ 
 Question 13
 
 Consider the below switch statement. What should your system currently print?
@@ -211,6 +255,8 @@ What happens when you change number to:
 What happens when you remove the default clause?
 
 Solution
+ 
+ 
 Question 14
 
 Consider the variable below called population and the if-condition.
@@ -228,6 +274,8 @@ if population > 10000 {
  message = "\(population) is a large town"
 }
 Solution
+ 
+ 
 Question 15
 
 Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
