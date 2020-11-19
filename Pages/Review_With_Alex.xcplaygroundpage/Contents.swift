@@ -304,7 +304,7 @@ var basket = [String]()
 for (index, item) in garden.enumerated() {
     if item == "🌷" {
         basket.append(item)
-        garden[index] = "dirt"
+        garden[index= "dirt"
     }
 }
 
